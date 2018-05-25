@@ -1,0 +1,11 @@
+{
+  "name": "portfolio2018",
+  "version": "1.0.0",
+  "description": "My new portfolio",
+  "main": "index.js",
+  "author": "Camille Gicquel",
+  "license": "MIT",
+  "dependencies": {
+    "sass": "^1.2.0"
+  }
+}
