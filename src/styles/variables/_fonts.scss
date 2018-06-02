@@ -1,0 +1,7 @@
+@import "src/styles/mixins/_font-face";
+
+@include font-face("Montserrat", "../assets/fonts/montserrat-bold-webfont", 700, normal);
+@include font-face("Montserrat", "../assets/fonts/montserrat-regular-webfont", normal, normal);
+@include font-face("Montserrat", "../assets/fonts/montserrat-light-webfont", 300, normal);
+
+$font-family: 'Montserrat', 'Avenir','Helvetica Neue', sans-serif;
