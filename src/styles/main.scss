@@ -1,9 +1,13 @@
 @import 'fonts';
+@import 'variables/_colors';
 
 body {
+  background-color: map-get($theme-colors-primary, base);
   font-family: 'Montserrat', 'Avenir','Helvetica Neue', sans-serif;
+  color: map-get($theme-colors-reverse, darker-1);
 }
 
-h2 {
-  color: green;
+.title {
+  font-weight: 300;
+  color: map-get($theme-colors-reverse,base);
 }
