@@ -1,4 +1,4 @@
-$theme-colors-primary: (
+/*$theme-colors-primary: (
     base: #1F2529,
     lighter-1: #293036,
     lighter-2: #272E33
@@ -21,4 +21,36 @@ $theme-colors-secondary: (
 $theme-colors-reverse: (
     base: white,
     darker-1: #8AA4B5,
+)*/
+
+$theme-colors-primary: (
+    base: #010116,
+    darker-1: #000008,
+    lighter-1: #04042A,
+    lighter-2: #0B0B45
+);
+
+$theme-colors-accent: (
+    base: #6CFFDE,
+    darker-1: mix(#6CFFDE, map-get($theme-colors-primary, lighter-2), 25%),
+    darker-2: mix(#6CFFDE, map-get($theme-colors-primary, lighter-2), 50%),
+);
+
+$theme-colors-secondary: (
+    base: #C2008E,
+    lighter-1: #CF0098,
+    darker-1: #A8007B,
+    darker-2: #82005F 
+);
+
+$theme-colors-tertiary: (
+    base: #F7CF34,
+    lighter-1: #FFE661,
+    darker-1: #DEBA2E,
+    darker-2: #B89A26
+);
+
+$theme-colors-reverse: (
+    base: white,
+    darker-1: mix(white, map-get($theme-colors-accent, darker-2), 50%)
 )
