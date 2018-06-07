@@ -5,3 +5,12 @@
 @include font-face("Montserrat", "../assets/fonts/montserrat-light-webfont", 300, normal);
 
 $font-family: 'Montserrat', 'Avenir','Helvetica Neue', sans-serif;
+$font-size-base: 1rem;
+$font-size-scale-ratio: 1.25;
+$font-size-small: .875rem;
+
+$font-size-h5: $font-size-base * $font-size-scale-ratio;
+$font-size-h4: $font-size-h5 * $font-size-scale-ratio;
+$font-size-h3: $font-size-h4 * $font-size-scale-ratio;
+$font-size-h2: $font-size-h3 * $font-size-scale-ratio;
+$font-size-h1: $font-size-h2 * $font-size-scale-ratio;
