@@ -1,0 +1,65 @@
+.skills {
+    width: 100%;
+
+    ul {
+        padding: 0;
+        margin: 0;
+        list-style-type: none;
+    }
+
+    &__table {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__group {
+        display: grid;
+        grid-template-columns: repeat(5, minmax(7rem, 10rem));
+        grid-gap: 1px;
+    }
+
+    &__item {
+        padding: .5rem;
+        border: solid 1px map-get($theme-colors-reverse, darker-1);
+        margin-bottom: 1px;
+        background: linear-gradient(to bottom right, transparent, fade-out(map-get($theme-colors-reverse, darker-1), .4));
+        border-radius: 2px;
+
+        .skills__group--language & {
+            background: linear-gradient(to bottom right, transparent, fade-out(map-get($theme-colors-accent, darker-1), .4));
+            border-color: map-get($theme-colors-accent, darker-1);
+        }
+
+        .skills__group--code & {
+            background: linear-gradient(to bottom right, transparent, fade-out(map-get($theme-colors-secondary, darker-1), .4));
+            border-color: map-get($theme-colors-secondary, darker-1);
+        }
+
+        .skills__group--design & {
+            background: linear-gradient(to bottom right, transparent, fade-out(map-get($theme-colors-tertiary, darker-1), .4));
+            border-color: map-get($theme-colors-tertiary, darker-1);
+        }
+    }
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        width: 100%;
+        height: 0;
+        padding-bottom: 100%;
+    }
+
+    &__name {
+        order: 2;
+    }
+
+    &__level {
+        order: 1;
+        text-align: right;
+    }
+
+    &__name {
+        color: map-get($theme-colors-reverse, base);
+    }
+}
