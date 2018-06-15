@@ -1,6 +1,8 @@
 @import 'variables/_fonts';
 @import 'variables/_colors';
 
+@import 'components/skills/skills';
+
 body {
   background-color: map-get($theme-colors-primary, base);
   font-family: $font-family;
@@ -8,6 +10,20 @@ body {
 }
 
 .title {
-  font-weight: 300;
   color: map-get($theme-colors-reverse,base);
+  
+  &--main {
+    font-weight: 300;
+    font-size: $font-size-h1;
+  }
+  
+  &--sub {
+    font-weight: 300;
+    font-size: $font-size-h2;
+  }
+
+  &--minor {
+    font-weight: 400;
+    font-size: $font-size-h3;
+  }
 }
