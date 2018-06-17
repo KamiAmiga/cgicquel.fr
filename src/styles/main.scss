@@ -1,3 +1,4 @@
+@import 'variables/_breakpoints';
 @import 'variables/_fonts';
 @import 'variables/_colors';
 
@@ -11,12 +12,12 @@ body {
 
 .title {
   color: map-get($theme-colors-reverse,base);
-  
+
   &--main {
     font-weight: 300;
     font-size: $font-size-h1;
   }
-  
+
   &--sub {
     font-weight: 300;
     font-size: $font-size-h2;
