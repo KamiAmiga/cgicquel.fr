@@ -1,57 +1,71 @@
 .skills {
     width: 100%;
 
-    ul {
-        padding: 0;
-        margin: 0;
-        list-style-type: none;
+    &__table {
+        display: grid;
+        //grid-template-rows: repeat(auto-fit, 8rem);
+        grid-template-columns: repeat(auto-fit, 8rem);
+        grid-template-areas:
+          "language language"
+          "code code"
+          "design design"
+          "transverse transverse";
+        grid-gap: 1px;
     }
 
     &__group {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
+        display: grid;
+        padding: 0;
+        margin: 0;
+        list-style-type: none;
+        grid-gap: 1px;
+        grid-template-columns: repeat(2, 1fr);
+
+        &--language {
+          grid-area: language;
+        }
+
+        &--code {
+          grid-area: code;
+        }
+
+        &--design {
+          grid-area: design;
+        }
+
+        &--transverse {
+          grid-area: transverse;
+        }
     }
 
     &__item {
-        flex: 30% 0 1;
-        min-width: 6.25rem;
-        max-width: 8rem;
+        display: flex;
+        box-sizing: border-box;
+        height: 8rem;
         padding: .5rem;
         border: solid 1px map-get($theme-colors-reverse, darker-1);
-        margin-bottom: 1px;
-        margin-right: 1px;
+        position: relative;
+        flex-direction: column-reverse;
         background: linear-gradient(to bottom right, transparent, fade-out(map-get($theme-colors-reverse, darker-1), .6));
         border-radius: 2px;
 
-        .skills__group--language & {
+        &--language {
             background: linear-gradient(to bottom right, transparent, fade-out(map-get($theme-colors-accent, base), .6));
             border-color: map-get($theme-colors-accent, darker-1);
         }
 
-        .skills__group--code & {
+        &--code {
             background: linear-gradient(to bottom right, transparent, fade-out(map-get($theme-colors-secondary, base), .6));
             border-color: map-get($theme-colors-secondary, darker-1);
+
+            &:nth-child(6) {
+              grid-column-start: 1;
+            }
         }
 
-        .skills__group--design & {
+        &--design {
             background: linear-gradient(to bottom right, transparent, fade-out(map-get($theme-colors-tertiary, base), .6));
             border-color: map-get($theme-colors-tertiary, darker-1);
-        }
-    }
-
-    &__content {
-        width: 100%;
-        height: 100%;
-        position: absolute;
-        display: flex;
-        flex-direction: column-reverse;
-        align-items: stretch;
-
-        &-wrapper {
-          width: 100%;
-          padding-bottom: 100%;
-          position: relative;
         }
     }
 
@@ -78,5 +92,118 @@
       position: absolute;
       top: 0;
       right: 0;
+    }
+
+    @media screen and (min-width: $breakpoint-xs) {
+      &__table {
+          grid-template-areas:
+            "language language language"
+            "code code ."
+            "design design design"
+            "transverse transverse transverse"
+      }
+
+      &__group {
+          &--language {
+            grid-template-columns: repeat(3, 1fr);
+          }
+
+          &--code {
+            grid-template-columns: repeat(2, 1fr);
+          }
+
+          &--design {
+            grid-template-columns: repeat(3, 1fr);
+          }
+
+          &--transverse {
+            grid-template-columns: repeat(3, 1fr);
+          }
+      }
+    }
+
+    @media screen and (min-width: $breakpoint-m) {
+      &__table {
+          grid-template-columns: repeat(7, 8rem);
+          //grid-template-rows: repeat(4, 8rem);
+          grid-template-areas:
+            "language . . . . . transverse"
+            "language code code code design design transverse"
+            "language code code code design design ."
+            ". code code code design design ."
+      }
+
+      &__group {
+          grid-auto-flow: column;
+
+          &--language {
+            grid-template-columns: 1fr;
+            grid-template-rows: repeat(3, 1fr);
+          }
+
+          &--code {
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(3, 1fr);
+          }
+
+          &--design {
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(3, 1fr);
+          }
+
+          &--transverse {
+            grid-template-columns: 1fr;
+            grid-template-rows: repeat(2, 1fr);
+          }
+      }
+
+      &__item {
+          &--code {
+            &:nth-child(7) {
+              grid-row-start: 2;
+            }
+
+            &:nth-child(6) {
+              grid-column-start: auto;
+            }
+          }
+      }
+    }
+
+    @media screen and (min-width: $breakpoint-l) {
+      &__table {
+          grid-template-columns: repeat(8, 8rem);
+          //grid-template-rows: repeat(3, 8rem);
+          grid-template-areas:
+            "language . . . . design design transverse"
+            "language code code code code design design transverse"
+            "language code code code code design design transverse"
+      }
+
+      &__group {
+          &--code {
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: repeat(2, 1fr);
+          }
+
+          &--design {
+            grid-template-rows: repeat(3, 1fr);
+          }
+
+          &--transverse {
+            grid-template-rows: repeat(3, 1fr);
+          }
+      }
+
+      &__item {
+          &--code {
+            &:nth-child(5) {
+              grid-row-start: 2;
+            }
+            &:nth-child(5) {
+              grid-row-start: auto;
+            }
+          }
+      }
     }
 }
