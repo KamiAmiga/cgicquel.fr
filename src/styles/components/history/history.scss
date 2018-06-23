@@ -12,40 +12,18 @@
     padding: 1rem 0 1rem 3rem;
     position: relative;
 
-    &:first-child {
-      &:before {
-        border-top-left-radius: .063rem;
-        border-top-right-radius: .063rem;
-      }
-    }
-
-    &:last-child {
-      &:before {
-        border-bottom-left-radius: .063rem;
-        border-bottom-right-radius: .063rem;
-      }
-    }
-
-    &--school {
-      &::before {
-        background-color: map-get($theme-colors-secondary, base);
-      }
-    }
-
-    &--experience {
-      &::before {
-        background-color: map-get($theme-colors-tertiary, base);
-      }
-    }
-
     &::before {
       content: "";
       display: block;
-      width: .125rem;
+      width: 0;
       height: 100%;
+      border-left-style: solid;
+      border-left-width: .063rem;
+      border-right-style: solid;
+      border-right-width: .063rem;
       position: absolute;
       top: 0;
-      left: 1rem;
+      left: 1.063rem;
     }
 
     &-icon {
@@ -94,6 +72,20 @@
       display: block;
       font-size: $font-size-small;
     }
+
+    &--school {
+      &::before {
+        border-left-color: map-get($theme-colors-secondary, base);
+        border-right-color: map-get($theme-colors-secondary, base);
+      }
+    }
+
+    &--experience {
+      &::before {
+        border-left-color: map-get($theme-colors-tertiary, base);
+        border-right-color: map-get($theme-colors-tertiary, base);
+      }
+    }
   }
 
   @media screen and (min-width: $breakpoint-xs) {
@@ -101,24 +93,6 @@
       box-sizing: border-box;
       width: 50%;
       position: relative;
-
-      &--school {
-        padding: 1rem 2rem 1rem 0;
-        align-self: flex-start;
-
-        &::before {
-          left: 100%;
-        }
-      }
-
-      &--experience {
-        padding: 1rem 0 1rem 2rem;
-        align-self: flex-end;
-
-        &::before {
-          left: 0;
-        }
-      }
 
       &-icon-container {
         position: absolute;
@@ -139,6 +113,142 @@
       &-date {
         .history__item--school & {
           text-align: right;
+        }
+      }
+
+      &--school {
+        padding: 1rem 2rem 1rem 0;
+        align-self: flex-start;
+
+        &::before {
+          left: 100%;
+          transform: translateX(-.063rem);
+        }
+      }
+
+      &--experience {
+        padding: 1rem 0 1rem 2rem;
+        align-self: flex-end;
+
+        &::before {
+          left: 0;
+          transform: translateX(-.063rem);
+        }
+      }
+    }
+  }
+
+  @media screen and (min-width: $breakpoint-l) {
+    &__list {
+      flex-direction: row;
+    }
+
+    &__item {
+      width: 12.5%;
+      height: 15rem;
+      padding: 0;
+
+      &::before {
+        width: 100%;
+        height: 0;
+        left: 0;
+      }
+
+      &-description {
+        position: absolute;
+        width: 200%;
+
+        .history__item--school & {
+          bottom: 1rem;
+          left: 50%;
+          transform-origin: left bottom;
+          transform: translateX(2rem) rotate(330deg);
+        }
+
+        .history__item--experience & {
+          top: 1rem;
+          right: 50%;
+          transform-origin: right top;
+          transform: translateX(-2rem) rotate(330deg);
+        }
+      }
+
+      &-icon-container {
+        transform: translate(-50%, -50%);
+
+        .history__item--school & {
+          left: 50%;
+          top: 100%;
+        }
+
+        .history__item--experience & {
+          left: 50%;
+          top: 0;
+        }
+      }
+
+      &-title,
+      &-place,
+      &-date {
+        .history__item--school & {
+          text-align: left;
+        }
+
+        .history__item--experience & {
+          text-align: right;
+        }
+      }
+
+      &--school {
+        align-self: flex-start;
+
+        &::before {
+          border-top: solid .125rem map-get($theme-colors-secondary, base);
+          border-right: none;
+          border-left: none;
+          top: 100%;
+        }
+      }
+
+      &--experience {
+        align-self: flex-end;
+        margin-top: 19rem;
+
+        &::before {
+          border-right: none;
+          border-bottom: solid .125rem map-get($theme-colors-tertiary, base);
+          border-left: none;
+          bottom: 100%;
+        }
+      }
+
+      &--junction-experience {
+        &::before {
+          top: 100%;
+          left: -100%;
+          border-right: solid .125rem map-get($theme-colors-secondary, base);
+          border-top-right-radius: .5rem;
+          transform-origin: top right;
+          transform: translateY(0) skewX(30deg);
+        }
+      }
+
+      &--junction-school {
+        &::before {
+          top: auto;
+          bottom: 100%;
+          border-left: solid .125rem map-get($theme-colors-tertiary, base);
+          border-bottom-left-radius: .5rem;
+          transform-origin: bottom left;
+          transform: translateY(.125rem) skewX(30deg);
+        }
+      }
+
+      &--junction-experience,
+      &--junction-school {
+        &::before {
+          width: 200%;
+          height: 3.825rem;
         }
       }
     }
