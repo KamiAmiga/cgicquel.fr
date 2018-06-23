@@ -95,4 +95,52 @@
       font-size: $font-size-small;
     }
   }
+
+  @media screen and (min-width: $breakpoint-xs) {
+    &__item {
+      box-sizing: border-box;
+      width: 50%;
+      position: relative;
+
+      &--school {
+        padding: 1rem 2rem 1rem 0;
+        align-self: flex-start;
+
+        &::before {
+          left: 100%;
+        }
+      }
+
+      &--experience {
+        padding: 1rem 0 1rem 2rem;
+        align-self: flex-end;
+
+        &::before {
+          left: 0;
+        }
+      }
+
+      &-icon-container {
+        position: absolute;
+        transform: translate(-50%, -50%);
+
+        .history__item--school & {
+          left: 100%;
+        }
+      }
+
+      &-title {
+        .history__item--school & {
+          text-align: right;
+        }
+      }
+
+      &-place,
+      &-date {
+        .history__item--school & {
+          text-align: right;
+        }
+      }
+    }
+  }
 }
