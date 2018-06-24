@@ -1,0 +1,26 @@
+.socials {
+  &__list {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+  }
+
+  &__item {
+    &-link {
+      display: inline-block;
+      padding: .5rem 0;
+      text-decoration: none;
+    }
+
+    &-icon {
+      width: 2rem;
+      margin-right: .5rem;
+      fill: map-get($theme-colors-reverse, base);
+    }
+
+    &-description {
+      color: map-get($theme-colors-reverse, base);
+      text-decoration: none;
+    }
+  }
+}

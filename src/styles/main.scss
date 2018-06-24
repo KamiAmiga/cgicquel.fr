@@ -5,6 +5,7 @@
 @import 'components/history/history';
 @import 'components/skills/skills';
 @import 'components/interests/interests';
+@import 'components/socials/socials';
 
 body {
   background-color: map-get($theme-colors-primary, base);
