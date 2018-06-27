@@ -31,3 +31,46 @@ body {
     font-size: $font-size-h3;
   }
 }
+
+.content {
+  display: flex;
+  width: 100%;
+  max-width: 80rem;
+  margin: 0 auto;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.header {
+  &__title {
+    padding: 2rem 1rem;
+    margin: 0;
+  }
+
+  &__name {
+    display: block;
+    text-align: center;
+  }
+
+  &__description {
+    display: block;
+    padding-top: 1rem;
+    text-align: center;
+    font-size: $font-size-base;
+  }
+}
+
+.section {
+  box-sizing: border-box;
+  padding: 5rem 1rem 0 1rem;
+  flex-shrink: 0;
+
+  &__title {
+    padding: 0 0 2rem 0;
+    margin: 0;
+  }
+
+  &:first-child {
+    padding-top: 0;
+  }
+}

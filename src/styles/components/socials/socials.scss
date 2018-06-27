@@ -6,14 +6,18 @@
   }
 
   &__item {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+
     &-link {
-      display: inline-block;
       padding: .5rem 0;
       text-decoration: none;
     }
 
     &-icon {
       width: 2rem;
+      flex-grow: 0;
       margin-right: .5rem;
       fill: map-get($theme-colors-reverse, base);
     }
@@ -22,5 +26,9 @@
       color: map-get($theme-colors-reverse, base);
       text-decoration: none;
     }
+  }
+
+  @media screen and (min-width: $breakpoint-m) {
+    width: 50%;
   }
 }
