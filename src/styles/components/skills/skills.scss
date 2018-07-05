@@ -42,20 +42,26 @@
         box-sizing: border-box;
         height: 7.5rem;
         padding: .5rem;
-        border: solid 1px map-get($theme-colors-reverse, darker-1);
+        border-style: solid;
+        border-width: 1px;
         position: relative;
         flex-direction: column-reverse;
-        background: linear-gradient(to bottom right, transparent, fade-out(map-get($theme-colors-reverse, darker-1), .6));
         border-radius: 2px;
 
         &--language {
-            background: linear-gradient(to bottom right, transparent, fade-out(map-get($theme-colors-accent, base), .6));
-            border-color: map-get($theme-colors-accent, darker-1);
+            background: linear-gradient(
+              to bottom right,
+              transparent,
+              map-get($theme-colors-secondary, base));
+            border-color: map-get($theme-colors-secondary, base);
         }
 
         &--code {
-            background: linear-gradient(to bottom right, transparent, fade-out(map-get($theme-colors-secondary, base), .6));
-            border-color: map-get($theme-colors-secondary, darker-1);
+            background: linear-gradient(
+              to bottom right,
+              transparent,
+              map-get($theme-colors-accent, base));
+            border-color: map-get($theme-colors-accent, base);
 
             &:nth-child(6) {
               grid-column-start: 1;
@@ -63,8 +69,19 @@
         }
 
         &--design {
-            background: linear-gradient(to bottom right, transparent, fade-out(map-get($theme-colors-tertiary, base), .6));
-            border-color: map-get($theme-colors-tertiary, darker-1);
+            background: linear-gradient(
+              to bottom right,
+              transparent,
+              map-get($theme-colors-tertiary, base));
+            border-color: map-get($theme-colors-tertiary, base);
+        }
+
+        &--transverse {
+            background: linear-gradient(
+              to bottom right,
+              transparent,
+              map-get($theme-colors-fourth, base));
+            border-color: map-get($theme-colors-fourth, base);
         }
     }
 

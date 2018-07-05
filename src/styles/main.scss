@@ -10,7 +10,7 @@
 body {
   background-color: map-get($theme-colors-primary, base);
   font-family: $font-family;
-  color: map-get($theme-colors-reverse, darker-1);
+  color: map-get($theme-colors-reverse, darker);
 }
 
 .title {

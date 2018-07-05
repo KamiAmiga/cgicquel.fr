@@ -31,7 +31,7 @@
     &-icon {
       width: 1.25rem;
       height: 1.25rem;
-      fill: map-get($theme-colors-primary, lighter-1);
+      fill: map-get($theme-colors-primary, darker);
 
       &-container {
         display: flex;
@@ -49,11 +49,11 @@
         transform: translate(0, -50%);
 
         .history__item--school & {
-          border-color: map-get($theme-colors-secondary, base);
+          border-color: map-get($theme-colors-tertiary, base);
         }
 
         .history__item--experience & {
-          border-color: map-get($theme-colors-tertiary, base);
+          border-color: map-get($theme-colors-fifth, base);
         }
       }
     }
@@ -77,15 +77,15 @@
 
     &--school {
       &::before {
-        border-left-color: map-get($theme-colors-secondary, base);
-        border-right-color: map-get($theme-colors-secondary, base);
+        border-left-color: map-get($theme-colors-tertiary, base);
+        border-right-color: map-get($theme-colors-tertiary, base);
       }
     }
 
     &--experience {
       &::before {
-        border-left-color: map-get($theme-colors-tertiary, base);
-        border-right-color: map-get($theme-colors-tertiary, base);
+        border-left-color: map-get($theme-colors-fifth, base);
+        border-right-color: map-get($theme-colors-fifth, base);
       }
     }
   }
@@ -205,7 +205,7 @@
         align-self: flex-start;
 
         &::before {
-          border-top: solid .125rem map-get($theme-colors-secondary, base);
+          border-top: solid .125rem map-get($theme-colors-tertiary, base);
           border-right: none;
           border-left: none;
           top: 100%;
@@ -218,7 +218,7 @@
 
         &::before {
           border-right: none;
-          border-bottom: solid .125rem map-get($theme-colors-tertiary, base);
+          border-bottom: solid .125rem map-get($theme-colors-fifth, base);
           border-left: none;
           bottom: 100%;
         }
@@ -228,7 +228,7 @@
         &::before {
           top: 100%;
           left: -100%;
-          border-right: solid .125rem map-get($theme-colors-secondary, base);
+          border-right: solid .125rem map-get($theme-colors-tertiary, base);
           border-top-right-radius: .5rem;
           transform-origin: top right;
           transform: translateY(0) skewX(30deg);
@@ -239,7 +239,7 @@
         &::before {
           top: auto;
           bottom: 100%;
-          border-left: solid .125rem map-get($theme-colors-tertiary, base);
+          border-left: solid .125rem map-get($theme-colors-fifth, base);
           border-bottom-left-radius: .5rem;
           transform-origin: bottom left;
           transform: translateY(.125rem) skewX(30deg);

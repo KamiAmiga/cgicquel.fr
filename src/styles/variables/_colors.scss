@@ -1,56 +1,54 @@
-/*$theme-colors-primary: (
-    base: #1F2529,
-    lighter-1: #293036,
-    lighter-2: #272E33
-);
+$blue-primary: #111E36;
+$blue-secondary: #00091C;
+$blue-tertiary: #D8FFFF;
+$blue-fourth: #25F7F8;
 
-$theme-colors-accent: (
-    base: #C2008E,
-    lighter-1: #CF0098,
-    darker-1: #A8007B,
-    darker-2: #82005F 
-);
+$purple-primary: #c849ce;
+$red-primary: #ff4d84;
+$green-primary: #00ffa9;
+$orange-primary: #ffba64;
 
-$theme-colors-secondary: (
-    base: #F7CF34,
-    lighter-1: #FFE661,
-    darker-1: #DEBA2E,
-    darker-2: #B89A26
-);
+$white-primary: #fff;
 
-$theme-colors-reverse: (
-    base: white,
-    darker-1: #8AA4B5,
-)*/
 
 $theme-colors-primary: (
-    base: #010116,
-    darker-1: #000008,
-    lighter-1: #04042A,
-    lighter-2: #0B0B45
+    base: $blue-primary,
+    darker: $blue-secondary,
+    lighter-1: mix($blue-primary, $blue-tertiary, 16%),
+    lighter-2: mix($blue-primary, $blue-tertiary, 48%)
 );
 
 $theme-colors-accent: (
-    base: #6CFFDE,
-    darker-1: mix(#6CFFDE, map-get($theme-colors-primary, lighter-2), 25%),
-    darker-2: mix(#6CFFDE, map-get($theme-colors-primary, lighter-2), 50%),
+    base: $blue-fourth,
+    darker: mix($blue-fourth, $blue-primary, 32%),
+    lighter: mix($blue-fourth, $blue-tertiary, 64%)
 );
 
 $theme-colors-secondary: (
-    base: #C2008E,
-    lighter-1: #CF0098,
-    darker-1: #A8007B,
-    darker-2: #82005F 
+    base: $purple-primary,
+    darker: mix($purple-primary, $blue-primary, 32%),
+    lighter: mix($purple-primary, $blue-tertiary, 48%)
 );
 
 $theme-colors-tertiary: (
-    base: #F7CF34,
-    lighter-1: #FFE661,
-    darker-1: #DEBA2E,
-    darker-2: #B89A26
+    base: $red-primary,
+    darker: mix($red-primary, $blue-primary, 32%),
+    lighter: mix($red-primary, $blue-tertiary, 48%)
+);
+
+$theme-colors-fourth: (
+    base: $green-primary,
+    darker: mix($green-primary, $blue-primary, 32%),
+    lighter: mix($green-primary, $blue-tertiary, 64%)
+);
+
+$theme-colors-fifth: (
+    base: $orange-primary,
+    darker: mix($orange-primary, $blue-primary, 32%),
+    lighter: mix($orange-primary, $blue-tertiary, 48%)
 );
 
 $theme-colors-reverse: (
-    base: white,
-    darker-1: mix(white, map-get($theme-colors-accent, darker-2), 50%)
-)
+    base: $white-primary,
+    darker: $blue-tertiary
+);

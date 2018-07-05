@@ -23,7 +23,7 @@
     }
 
     &-description {
-      color: map-get($theme-colors-reverse, base);
+      color: map-get($theme-colors-accent, base);
       text-decoration: none;
     }
   }
