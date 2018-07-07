@@ -1,16 +1,22 @@
-@import "src/styles/mixins/_font-face";
-
 @include font-face("Montserrat", "../assets/fonts/montserrat-bold-webfont", 700, normal);
 @include font-face("Montserrat", "../assets/fonts/montserrat-regular-webfont", normal, normal);
 @include font-face("Montserrat", "../assets/fonts/montserrat-light-webfont", 300, normal);
 
 $font-family: 'Montserrat', 'Avenir','Helvetica Neue', sans-serif;
 $font-size-base: 1rem;
-$font-size-scale-ratio: 1.25;
-$font-size-small: .875rem;
+$font-size-scale-ratio: 1.333;
+$font-size-small: $font-size-base / $font-size-scale-ratio;
 
-$font-size-h5: $font-size-base * $font-size-scale-ratio;
-$font-size-h4: $font-size-h5 * $font-size-scale-ratio;
-$font-size-h3: $font-size-h4 * $font-size-scale-ratio;
-$font-size-h2: $font-size-h3 * $font-size-scale-ratio;
-$font-size-h1: $font-size-h2 * $font-size-scale-ratio;
+$font-weight-base: 400;
+$font-weight-light: 300;
+$font-weight-semibold: 600;
+
+$line-height-base: 1.45em;
+$line-height-small-1: 1.25em;
+$line-height-small-2: 1.2em;
+$line-height-small-3: 1em;
+
+$letter-spacing-base: -.005em;
+$letter-spacing-small-1: -.01em;
+$letter-spacing-large-1: .005em;
+$letter-spacing-large-2: .01em;

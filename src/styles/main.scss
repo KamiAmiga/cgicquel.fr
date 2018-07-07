@@ -1,6 +1,11 @@
+@import "src/styles/mixins/_font-face";
+
 @import 'variables/_breakpoints';
 @import 'variables/_fonts';
 @import 'variables/_colors';
+
+@import 'components/global/headings';
+@import 'components/global/texts';
 
 @import 'components/history/history';
 @import 'components/skills/skills';
@@ -8,28 +13,10 @@
 @import 'components/socials/socials';
 
 body {
+  @extend %text--base;
   background-color: map-get($theme-colors-primary, base);
   font-family: $font-family;
   color: map-get($theme-colors-reverse, darker);
-}
-
-.title {
-  color: map-get($theme-colors-reverse,base);
-
-  &--main {
-    font-weight: 300;
-    font-size: $font-size-h1;
-  }
-
-  &--sub {
-    font-weight: 300;
-    font-size: $font-size-h2;
-  }
-
-  &--minor {
-    font-weight: 400;
-    font-size: $font-size-h3;
-  }
 }
 
 .content {
