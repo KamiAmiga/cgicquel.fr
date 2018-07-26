@@ -3,25 +3,39 @@
     width: 12.5rem;
     height: 12.5rem;
     padding: 0;
-    border: solid .4rem map-get($theme-colors-secondary, base);
+    border: solid .4rem map-get($theme-colors-secondary, darker);
     margin: 2rem auto 0 auto;
     position: relative;
+    background: radial-gradient(
+      fade-out(map-get($theme-colors-tertiary, darker), .6),
+      fade-out(map-get($theme-colors-tertiary, darker), .6) 20%,
+      transparent 50%
+      );
     list-style-type: none;
     border-radius: 50%;
+  }
+
+  &__illustration {
+    width: 5rem;
+    height: 5rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    fill: map-get($theme-colors-tertiary, base);
+    transform: translate(-50%, -50%);
   }
 
   &__item {
     display: flex;
     width: 3.5rem;
     height: 3.5rem;
-    border: solid .2rem map-get($theme-colors-secondary, base);
+    border: solid .2rem map-get($theme-colors-secondary, darker);
     position: absolute;
     background-color: map-get($theme-colors-reverse, base);
     align-items: center;
     justify-content: center;
     border-radius: 50%;
     transform: translate(-50%, -50%);
-    box-shadow: 0 0 .1rem 0.25rem fade-out(map-get($theme-colors-reverse, darker), .8);
 
     &--top {
       top: 0;
