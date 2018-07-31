@@ -7,11 +7,6 @@
 @import 'components/global/headings';
 @import 'components/global/texts';
 
-@import 'components/history/history';
-@import 'components/skills/skills';
-@import 'components/interests/interests';
-@import 'components/socials/socials';
-
 body {
   @extend %text--base;
   background-color: map-get($theme-colors-primary, base);
@@ -20,12 +15,16 @@ body {
 }
 
 .content {
-  display: flex;
+  display: block;
   width: 100%;
   max-width: 80rem;
   margin: 0 auto;
-  flex-direction: row;
-  flex-wrap: wrap;
+
+  @media screen and (min-width: $breakpoint-m) {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
 }
 
 .header {
@@ -61,3 +60,8 @@ body {
     padding-top: 0;
   }
 }
+
+@import 'components/history/history';
+@import 'components/skills/skills';
+@import 'components/interests/interests';
+@import 'components/socials/socials';

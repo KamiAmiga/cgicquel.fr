@@ -144,7 +144,6 @@
 
     &__item {
       width: 12.5%;
-      height: 15rem;
       padding: 0;
 
       &::before {
@@ -199,6 +198,7 @@
       }
 
       &--school {
+        height: 15rem;
         align-self: flex-start;
 
         &::before {
@@ -210,6 +210,7 @@
       }
 
       &--experience {
+        height: 10rem;
         align-self: flex-end;
         margin-top: 19rem;
 
@@ -228,7 +229,7 @@
           border-right: solid .125rem map-get($theme-colors-tertiary, base);
           border-top-right-radius: .5rem;
           transform-origin: top right;
-          transform: translateY(0) skewX(30deg);
+          transform: translate(-2px, 0) skewX(30deg);
         }
       }
 
