@@ -60,8 +60,8 @@
             background: linear-gradient(
               to bottom right,
               transparent,
-              map-get($theme-colors-accent, base));
-            border-color: map-get($theme-colors-accent, base);
+              map-get($theme-colors-fifth, base));
+            border-color: map-get($theme-colors-fifth, base);
 
             &:nth-child(6) {
               grid-column-start: 1;

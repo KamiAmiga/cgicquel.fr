@@ -18,16 +18,30 @@
     
     &-icon {
       width: 2rem;
-      flex-grow: 0;
-      flex-shrink: 0;
       margin-right: 1rem;
       fill: map-get($theme-colors-reverse, base);
+      transform: scale(1);
+      transition: all .5s ease-out;
+      
+      .socials__item-link:hover &,
+      .socials__item-link:focus &,
+      .socials__item-link:active & {
+        fill: map-get($theme-colors-accent, lighter);
+        transform: scale(.75);
+      }
     }
     
     &-description {
       position: relative;
       color: map-get($theme-colors-reverse, base);
       text-decoration: none;
+      transition: color .5s ease-out;
+
+      .socials__item-link:hover &,
+      .socials__item-link:focus &,
+      .socials__item-link:active & {
+        color: map-get($theme-colors-accent, lighter);
+      }
 
       &::after {
         content: "";
