@@ -52,7 +52,7 @@
             background: linear-gradient(
               to bottom right,
               transparent,
-              map-get($theme-colors-secondary, base));
+              map-get($theme-colors-secondary, darker-1));
             border-color: map-get($theme-colors-secondary, base);
         }
 
@@ -60,7 +60,7 @@
             background: linear-gradient(
               to bottom right,
               transparent,
-              map-get($theme-colors-fifth, base));
+              map-get($theme-colors-fifth, darker-1));
             border-color: map-get($theme-colors-fifth, base);
 
             &:nth-child(6) {
@@ -72,7 +72,7 @@
             background: linear-gradient(
               to bottom right,
               transparent,
-              map-get($theme-colors-tertiary, base));
+              map-get($theme-colors-tertiary, darker-1));
             border-color: map-get($theme-colors-tertiary, base);
         }
 
@@ -80,7 +80,7 @@
             background: linear-gradient(
               to bottom right,
               transparent,
-              map-get($theme-colors-fourth, base));
+              map-get($theme-colors-fourth, darker-1));
             border-color: map-get($theme-colors-fourth, base);
         }
     }

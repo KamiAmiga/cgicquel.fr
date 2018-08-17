@@ -3,12 +3,12 @@
     width: 12.5rem;
     height: 12.5rem;
     padding: 0;
-    border: solid .4rem map-get($theme-colors-secondary, darker);
+    border: solid .4rem map-get($theme-colors-secondary, darker-1);
     margin: 2rem auto 0 auto;
     position: relative;
     background: radial-gradient(
-      fade-out(map-get($theme-colors-tertiary, darker), .6),
-      fade-out(map-get($theme-colors-tertiary, darker), .6) 20%,
+      fade-out(map-get($theme-colors-tertiary, darker-2), .6),
+      fade-out(map-get($theme-colors-tertiary, darker-2), .6) 20%,
       transparent 50%
       );
     list-style-type: none;
@@ -29,7 +29,7 @@
     display: flex;
     width: 3.5rem;
     height: 3.5rem;
-    border: solid .2rem map-get($theme-colors-secondary, darker);
+    border: solid .2rem map-get($theme-colors-secondary, darker-1);
     position: absolute;
     background-color: map-get($theme-colors-reverse, base);
     align-items: center;

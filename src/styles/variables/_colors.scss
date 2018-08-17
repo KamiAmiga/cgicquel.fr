@@ -20,31 +20,36 @@ $theme-colors-primary: (
 
 $theme-colors-accent: (
     base: $blue-fourth,
-    darker: mix($blue-fourth, $blue-primary, 32%),
+    darker-1: mix($blue-fourth, $blue-primary, 48%),
+    darker-2: mix($blue-fourth, $blue-primary, 32%),
     lighter: mix($blue-fourth, $blue-tertiary, 64%)
 );
 
 $theme-colors-secondary: (
     base: $purple-primary,
-    darker: mix($purple-primary, $blue-primary, 32%),
+    darker-1: mix($purple-primary, $blue-primary, 48%),
+    darker-2: mix($purple-primary, $blue-primary, 32%),
     lighter: mix($purple-primary, $blue-tertiary, 48%)
 );
 
 $theme-colors-tertiary: (
     base: $red-primary,
-    darker: mix($red-primary, $blue-primary, 32%),
+    darker-1: mix($red-primary, $blue-primary, 48%),
+    darker-2: mix($red-primary, $blue-primary, 32%),
     lighter: mix($red-primary, $blue-tertiary, 48%)
 );
 
 $theme-colors-fourth: (
     base: $green-primary,
-    darker: mix($green-primary, $blue-primary, 32%),
+    darker-1: mix($green-primary, $blue-primary, 48%),
+    darker-2: mix($green-primary, $blue-primary, 32%),
     lighter: mix($green-primary, $blue-tertiary, 64%)
 );
 
 $theme-colors-fifth: (
     base: $orange-primary,
-    darker: mix($orange-primary, $blue-primary, 32%),
+    darker-1: mix($orange-primary, $blue-primary, 48%),
+    darker-2: mix($orange-primary, $blue-primary, 32%),
     lighter: mix($orange-primary, $blue-tertiary, 48%)
 );
 
