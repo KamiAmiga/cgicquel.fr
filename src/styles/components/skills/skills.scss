@@ -106,9 +106,18 @@
     }
 
     &__level {
-      position: absolute;
-      top: 0;
-      right: 0;
+        display: block;
+        width: 1rem;
+        height: 1rem;
+        position: absolute;
+        top: .5rem;
+        right: .5rem;
+        fill: map-get($theme-colors-reverse, base);
+
+        &--minimum {
+          width: 0;
+          height: 0;
+        }
     }
 
     @media screen and (min-width: $breakpoint-xs) {
