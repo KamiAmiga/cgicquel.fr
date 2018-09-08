@@ -52,7 +52,8 @@
         position: absolute;
         bottom: -.5rem;
         left: 60%;
-        background-color: map-get($theme-colors-accent, base);
+        background-color: map-get($theme-colors-accent, lighter);
+        box-shadow: 2px 1px 4px 0 map-get($theme-colors-accent, darker-1);
         transform-origin: right;
         transform: scaleX(0);
         transition: transform .4s ease-in-out,
