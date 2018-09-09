@@ -229,7 +229,7 @@
           border-right: solid .125rem map-get($theme-colors-tertiary, base);
           border-top-right-radius: .5rem;
           transform-origin: top right;
-          transform: translate(-2px, 0) skewX(30deg);
+          transform: translate(-.125rem, 0) skewX(30deg);
         }
       }
 

@@ -1,5 +1,8 @@
 .intro {
     width: 100%;
+    padding-bottom: 2rem;
+    position: relative;
+    margin-bottom: 2rem;
     
     &__text {
         max-width: 55rem;
@@ -10,5 +13,20 @@
         &:not(:last-of-type) {
             margin-bottom: 1.5rem;
         }
+    }
+
+    &::after {
+        content: "";
+        display: block;
+        width: 2.5rem;
+        height: 2.5rem;
+        border-right: solid .125rem map-get($theme-colors-accent, base);
+        border-bottom: solid .125rem map-get($theme-colors-accent, base);
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        z-index: -1;
+        transform: translateX(-50%) rotate(45deg);
+        box-shadow: .15rem .15rem .125rem 0 map-get($theme-colors-accent, darker-2);
     }
 }

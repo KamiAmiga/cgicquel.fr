@@ -9,7 +9,7 @@
           "code code"
           "design design"
           "transverse transverse";
-        grid-gap: 1px;
+        grid-gap: .063rem;
     }
 
     &__group {
@@ -17,7 +17,7 @@
         padding: 0;
         margin: 0;
         list-style-type: none;
-        grid-gap: 1px;
+        grid-gap: .063rem;
         grid-template-columns: repeat(2, 1fr);
 
         &--language {
@@ -43,45 +43,76 @@
         height: 7.5rem;
         padding: .5rem;
         border-style: solid;
-        border-width: 1px;
+        border-width: .063rem;
         position: relative;
         flex-direction: column-reverse;
-        border-radius: 2px;
+        border-radius: .125rem;
+        transform: scale(1);
+        transition: transform .18s ease-in;
 
         &--language {
             background: linear-gradient(
               to bottom right,
-              transparent,
+              map-get($theme-colors-primary, base),
               map-get($theme-colors-secondary, darker-1));
             border-color: map-get($theme-colors-secondary, base);
+
+            &:hover,
+            &:focus {
+              box-shadow: .125rem .063rem .313rem 0 map-get($theme-colors-secondary, lighter);
+              z-index: 10;
+            }
         }
 
         &--code {
             background: linear-gradient(
               to bottom right,
-              transparent,
+              map-get($theme-colors-primary, base),
               map-get($theme-colors-fifth, darker-1));
             border-color: map-get($theme-colors-fifth, base);
 
             &:nth-child(6) {
               grid-column-start: 1;
             }
+
+            &:hover,
+            &:focus {
+              box-shadow: .125rem .063rem .313rem 0 map-get($theme-colors-fifth, lighter);
+              z-index: 10;
+            }
         }
 
         &--design {
             background: linear-gradient(
               to bottom right,
-              transparent,
+              map-get($theme-colors-primary, base),
               map-get($theme-colors-tertiary, darker-1));
             border-color: map-get($theme-colors-tertiary, base);
+
+            &:hover,
+            &:focus {
+              box-shadow: .125rem .063rem .313rem 0 map-get($theme-colors-tertiary, lighter);
+              z-index: 10;
+            }
         }
 
         &--transverse {
             background: linear-gradient(
               to bottom right,
-              transparent,
+              map-get($theme-colors-primary, base),
               map-get($theme-colors-fourth, darker-1));
             border-color: map-get($theme-colors-fourth, base);
+
+            &:hover,
+            &:focus {
+              box-shadow: .125rem .063rem .313rem 0 map-get($theme-colors-fourth, lighter);
+              z-index: 10;
+            }
+        }
+
+        &:hover,
+        &:focus {
+          transform: scale(1.05);
         }
     }
 

@@ -9,7 +9,11 @@
 
 body {
   @extend %text--base;
-  background-color: map-get($theme-colors-primary, base);
+  background: linear-gradient(
+    to bottom,
+    map-get($theme-colors-primary, darker),
+    map-get($theme-colors-primary, darker) 10%,
+    map-get($theme-colors-primary, base) 30%);
   font-family: $font-family;
   color: map-get($theme-colors-reverse, darker);
 }
@@ -24,25 +28,6 @@ body {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-  }
-}
-
-.header {
-  &__title {
-    padding: 2rem 1rem;
-    margin: 0;
-  }
-
-  &__name {
-    display: block;
-    text-align: center;
-  }
-
-  &__description {
-    display: block;
-    padding-top: 1rem;
-    text-align: center;
-    font-size: $font-size-base;
   }
 }
 
@@ -61,6 +46,7 @@ body {
   }
 }
 
+@import 'components/header/header';
 @import 'components/intro/intro';
 @import 'components/history/history';
 @import 'components/skills/skills';
