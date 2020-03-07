@@ -1,6 +1,6 @@
-# nuxtTest
+# cgicquel-portfolio
 
-> My portfolio made with Nuxt.js
+> My [portfolio](http://www.cgicquel.fr/) made with Nuxt.js
 
 ## Build Setup
 

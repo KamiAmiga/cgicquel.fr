@@ -1,8 +1,7 @@
 <template>
   <div>
     <h1 class="heading--main">
-      Camille Gicquel
-      <span>UI Design & Intégration</span>
+      Projets
     </h1>
   </div>
 </template>
