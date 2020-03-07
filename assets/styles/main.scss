@@ -1,0 +1,255 @@
+//
+// Font-faces
+//
+
+@include font-face("Montserrat",
+  "montserrat-semibold",
+  600);
+@include font-face("Montserrat",
+  "montserrat-regular",
+  normal);
+@include font-face("Montserrat",
+  "montserrat-light",
+  300);
+@include font-face("Inconsolata",
+  "inconsolata-bold",
+  700);
+
+
+//
+// Typographic styles
+//
+
+.font,
+%font {
+  &-sans {
+    font-family: $font-family-sans;
+
+    &--base {
+      font-size: $font-size-base;
+      color: map-get($theme-color-primary, reverse);
+      font-weight: $font-weight-base;
+      line-height: $line-height-base;
+      letter-spacing: $letter-spacing-base;
+    }
+
+    &--small {
+      font-size: $font-size-small;
+      color: map-get($theme-color-primary, lighter-4);
+      font-weight: $font-weight-base;
+      line-height: $line-height-base;
+      letter-spacing: $letter-spacing-large-1;
+    }
+
+    &--bold {
+      font-size: $font-size-base;
+      color: map-get($theme-color-primary, reverse);
+      font-weight: $font-weight-bold;
+      line-height: $line-height-base;
+      letter-spacing: $letter-spacing-base;
+    }
+
+    &--capitalized {
+      font-size: $font-size-base;
+      color: map-get($theme-color-accent, lighter);
+      font-weight: $font-weight-light;
+      line-height: $line-height-base;
+      letter-spacing: $letter-spacing-large-3;
+      text-transform: uppercase;
+    }
+
+    &--md {
+      font-size: $font-size-base * $font-size-scale-ratio;
+      color: map-get($theme-color-primary, reverse);
+      font-weight: $font-weight-semibold;
+      line-height: $line-height-small;
+      letter-spacing: $letter-spacing-small-1;
+    }
+
+    &--md-capitalized {
+      font-size: $font-size-base * $font-size-scale-ratio;
+      color: map-get($theme-color-primary, reverse);
+      font-weight: $font-weight-light;
+      line-height: $line-height-small;
+      letter-spacing: $letter-spacing-large-2;
+      text-transform: uppercase;
+    }
+
+    &--lg {
+      font-size: $font-size-base * $font-size-scale-ratio * $font-size-scale-ratio;
+      color: map-get($theme-color-primary, reverse);
+      font-weight: $font-weight-semibold;
+      line-height: $line-height-small;
+      letter-spacing: $letter-spacing-small-2;
+    }
+
+    &--xl {
+      font-size: $font-size-base * $font-size-scale-ratio * $font-size-scale-ratio * $font-size-scale-ratio;
+      color: map-get($theme-color-primary, reverse);
+      font-weight: $font-weight-semibold;
+      line-height: $line-height-small;
+      letter-spacing: $letter-spacing-small-2;
+    }
+
+    &--xxl {
+      font-size: $font-size-base * $font-size-scale-ratio * $font-size-scale-ratio * $font-size-scale-ratio * $font-size-scale-ratio;
+      color: map-get($theme-color-primary, reverse);
+      font-weight: $font-weight-semibold;
+      line-height: $line-height-small;
+      letter-spacing: $letter-spacing-small-1;
+    }
+
+    &--xxxl {
+      font-size: $font-size-base * $font-size-scale-ratio * $font-size-scale-ratio * $font-size-scale-ratio * $font-size-scale-ratio * $font-size-scale-ratio;
+      color: map-get($theme-color-primary, reverse);
+      font-weight: $font-weight-semibold;
+      line-height: $line-height-small;
+      letter-spacing: $letter-spacing-small-1;
+    }
+  }
+
+  &-mono {
+    font-family: $font-family-mono;
+    font-weight: $font-weight-bold;
+    line-height: $line-height-base;
+    letter-spacing: $letter-spacing-large-1;
+
+    &--base {
+      font-size: $font-size-base;
+      color: map-get($theme-color-primary, reverse);
+      font-weight: $font-weight-bold;
+    }
+
+    &--small {
+      font-size: $font-size-small;
+      color: map-get($theme-color-primary, lighter-4);
+      letter-spacing: $letter-spacing-large-1;
+    }
+  }
+}
+
+
+//
+// Headings
+//
+
+.heading {
+  &--main {
+    @extend %font-sans--xxxl;
+    display: inline-block;
+    padding: map-get($spacers, 3)
+      map-get($spacers, 8)
+      map-get($spacers, 3)
+      map-get($spacers, 7);
+    margin: 0;
+    position: relative;
+    background-color: map-get($theme-color-secondary, darker);
+    
+    &::after {
+      content: "";
+      display: block;
+      height: .375rem;
+      width: 50%;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background-color: map-get($theme-color-secondary, lighter);
+    }
+    
+    @media screen and (min-width: $breakpoint-m) {
+      padding: map-get($spacers, 4)
+        map-get($spacers, 10)
+        map-get($spacers, 4)
+        map-get($spacers, 7);
+
+      &::after {
+        height: map-get($spacers, 3);
+      }
+    }
+  }
+
+  &--second {
+    @extend %font-sans--xxl;
+    padding: 0;
+    margin-top: 0;
+    margin-bottom: map-get($spacers, 7);
+    position: relative;
+
+    &::after {
+      content: "";
+      display: block;
+      height: map-get($spacers, 2);
+      width: map-get($spacers, 8);
+      background-color: map-get($theme-color-secondary, darker);
+      box-shadow: (map-get($spacers, 2) * -1)
+        map-get($spacers, 1)
+        map-get($spacers, 2)
+        fade-out(map-get($theme-color-secondary, lighter), .68);
+    }
+  }
+}
+
+//
+// Layout bases
+//
+
+body {
+  @extend %font-sans;
+  @extend %font-sans--base;
+  margin: 0;
+  padding: 0;
+  background: map-get($theme-color-primary, base);
+}
+
+p {
+  margin-top: 0;
+  margin-bottom: map-get($spacers, 4);
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.content {
+  display: block;
+  width: 100%;
+  max-width: $container-max-width;
+  margin: 0 auto;
+
+  @media screen and (min-width: $breakpoint-m) {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+}
+
+.section {
+  box-sizing: border-box;
+  flex-shrink: 0;
+  padding: map-get($spacers, 7) map-get($spacers, 4);
+
+  &--full {
+    flex-basis: 100%;
+  }
+
+  &--half {
+    flex-basis: 50%;
+  }
+}
+
+.text-container {
+  max-width: 40rem;
+}
+
+//
+// Sr only
+//
+
+.sr-only {
+  width: 1px;
+  height: 1px;
+  position: absolute;
+  left: -10000px;
+  top: auto;
+  overflow: hidden;
+}

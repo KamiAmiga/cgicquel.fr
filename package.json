@@ -1,25 +1,29 @@
 {
-  "name": "portfolio2018",
+  "name": "nuxtTest",
   "version": "1.0.0",
-  "description": "My new portfolio",
-  "private": true,
+  "description": "My portfolio made with Nuxt.js",
   "author": "Camille Gicquel",
-  "license": "MIT",
+  "private": true,
   "scripts": {
-    "build": "webpack",
-    "dev": "webpack-dev-server --open"
+    "dev": "nuxt",
+    "build": "nuxt build",
+    "start": "nuxt start",
+    "generate": "nuxt generate",
+    "lint": "eslint --ext .js,.vue --ignore-path .gitignore ."
+  },
+  "dependencies": {
+    "@nuxtjs/axios": "^5.3.6",
+    "@nuxtjs/style-resources": "^1.0.0",
+    "@nuxtjs/svg-sprite": "^0.4.9",
+    "nuxt": "^2.0.0"
   },
   "devDependencies": {
-    "clean-webpack-plugin": "^0.1.19",
-    "css-loader": "^0.28.11",
-    "file-loader": "^1.1.11",
-    "html-webpack-plugin": "^3.2.0",
-    "mini-css-extract-plugin": "^0.4.2",
-    "node-sass": "^4.9.0",
-    "sass-loader": "^7.0.1",
-    "style-loader": "^0.21.0",
-    "webpack": "^4.10.2",
-    "webpack-cli": "^2.1.4",
-    "webpack-dev-server": "^3.1.4"
+    "@nuxtjs/eslint-config": "^1.0.1",
+    "@nuxtjs/eslint-module": "^1.0.0",
+    "babel-eslint": "^10.0.1",
+    "eslint": "^6.1.0",
+    "eslint-plugin-nuxt": ">=0.4.2",
+    "node-sass": "^4.13.0",
+    "sass-loader": "^8.0.0"
   }
 }
