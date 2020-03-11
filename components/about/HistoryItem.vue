@@ -2,17 +2,13 @@
   <li class="history__item"
     :class="['history__item--' + type,
       { 'history__item--junction' : junction }]">
-    <span class="history__item__icon-container">
-      <span class="history__item__icon">
-        <svg class="history__item-icon"
-          xmlns="http://www.w3.org/2000/svg"
-          viewBox="0 0 32 32">
-          <svg-icon v-if="type === 'school'"
-            name="scholar" />
-          <svg-icon v-else
-            name="bag" />
-        </svg>
-      </span>
+    <span class="history__item__icon-wrapper icon-wrapper icon-wrapper--s icon-wrapper--circle">
+      <svg-icon class="icon--m"
+        v-if="type === 'school'"
+        name="scholar" />
+      <svg-icon class="icon--s"
+        v-else
+        name="bag" />
     </span>
     <div class="history__item__description">
       <span class="font-sans--bold">{{ name }}</span>
@@ -88,33 +84,20 @@ $types:
           background-color: $color;
         }
 
-        .history__item__icon-container {
+        .history__item__icon-wrapper {
           border-color: $color;
         }
       }
     }
 
-    &__icon {
-      width: 1.25rem;
-      height: 1.25rem;
+    &__icon-wrapper {
       fill: map-get($theme-color-primary, base);
-
-      &-container {
-        display: flex;
-        box-sizing: border-box;
-        width: 2.5rem;
-        height: 2.5rem;
-        border-style: solid;
-        border-width: map-get($spacers, 1);
-        justify-content: center;
-        align-items: center;
-        background-color: map-get($theme-color-primary, reverse);
-        border-radius: 50%;
-        position: absolute;
-        top: 50%;
-        left: 0;
-        transform: translate(0, -50%);
-      }
+      border-width: map-get($spacers, 1);
+      background-color: map-get($theme-color-primary, reverse);
+      position: absolute;
+      top: 50%;
+      left: 0;
+      transform: translate(0, -50%);
     }
 
     &__description {
@@ -132,7 +115,7 @@ $types:
       &--school {
         align-self: flex-start;
         padding: map-get($spacers, 4)
-          (1.25rem + map-get($spacers, 4))
+          ((map-get($icon-wrapper-sizes, s) / 2) + map-get($spacers, 4))
           map-get($spacers, 4)
           0;
 
@@ -140,7 +123,7 @@ $types:
           left: 100%;
         }
 
-        .history__item__icon-container {
+        .history__item__icon-wrapper {
           left: 100%;
           transform: translate(-50%, -50%);
         }
@@ -155,14 +138,14 @@ $types:
         padding: map-get($spacers, 4)
           0
           map-get($spacers, 4)
-          (1.25rem + map-get($spacers, 4));
+          ((map-get($icon-wrapper-sizes, s) / 2) + map-get($spacers, 4));
 
         &::before {
           left: 0;
         }
 
-        .history__item__icon-container {
-          left: -1.25rem;
+        .history__item__icon-wrapper {
+          left: map-get($icon-wrapper-sizes, s) / -2;
         }
       }
     }
@@ -187,7 +170,7 @@ $types:
         width: 200%;
       }
 
-      &__icon-container {
+      &__icon-wrapper {
         transform: translate(-50%, -50%);
       }
 
@@ -224,7 +207,7 @@ $types:
             rotate(330deg);
         }
 
-        .history__item__icon-container {
+        .history__item__icon-wrapper {
           top: 100%;
           left: 50%;
         }
@@ -262,7 +245,7 @@ $types:
             rotate(330deg);
         }
 
-        .history__item__icon-container {
+        .history__item__icon-wrapper {
           top: 0;
           left: 50%;
         }

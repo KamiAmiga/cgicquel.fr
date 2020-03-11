@@ -1,17 +1,17 @@
 <template>
   <li class="skill-item">
     <div class="skill-item__icon-wrapper">
-      <svg-icon class="skill-item__icon" :name="icon" />
+      <svg-icon class="icon--xl" :name="icon" />
     </div>
     <span class="skill-item__name">{{ name }}</span>
     <template v-if="level > 0">
       <template v-if="level == 1">
         <span class="sr-only">Niveau correct</span>
-        <svg-icon class="skill-item__level" name="star" />
+        <svg-icon class="skill-item__level icon--s" name="star" />
       </template>
       <template v-else>
         <span class="sr-only">Bon niveau</span>
-        <svg-icon class="skill-item__level" name="stars" />
+        <svg-icon class="skill-item__level icon--s" name="stars" />
       </template>
     </template>
   </li>
@@ -70,15 +70,10 @@ $skill-grid-gap: .0625rem;
     flex-direction: column;
     fill: map-get($theme-color-primary, reverse);
 
-    &__icon {
-      width: map-get($spacers, 7);
-      height: map-get($spacers, 7);
-
-      &-wrapper {
-        display: flex;
-        flex-grow: 1;
-        align-items: flex-end;
-      }
+    &__icon-wrapper {
+      display: flex;
+      flex-grow: 1;
+      align-items: flex-end;
     }
 
     &__name {
@@ -86,8 +81,6 @@ $skill-grid-gap: .0625rem;
     }
 
     &__level {
-      width: map-get($spacers, 4);
-      height: map-get($spacers, 4);
       position: absolute;
       top: map-get($spacers, 3);
       right: map-get($spacers, 3);

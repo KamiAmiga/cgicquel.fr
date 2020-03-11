@@ -1,7 +1,7 @@
 <template>
   <li class="contact-item">
     <a class="contact-item__link" :href="url">
-      <div class="contact-item__link__icon-wrapper">
+      <div class="contact-item__link__icon-wrapper icon-wrapper icon-wrapper--square">
         <svg-icon class="contact-item__link__icon" :name="icon" />
       </div>
       <span class="contact-item__link__name">{{ name }}</span>
@@ -32,9 +32,9 @@ export default {
     position: relative;
 
     &__link {
-      display: flex;
+      display: inline-flex;
       align-items: center;
-      justify-content: start;
+      justify-content: flex-start;
       position: relative;
       color: map-get($theme-color-primary, reverse);
       text-decoration: none;
@@ -42,7 +42,7 @@ export default {
       &::before {
         content: "";
         display: block;
-        width: 56px;
+        width: 3.5rem;
         height: map-get($spacers, 3);
         position: absolute;
         right: 100%;
@@ -72,36 +72,23 @@ export default {
       }
 
       &__icon {
-        width: map-get($spacers, 4);
-        height: map-get($spacers, 4);
+        width: map-get($icon-sizes, s);
+        height: map-get($icon-sizes, s);
         fill: map-get($theme-color-primary, base);
 
         &-wrapper {
-          display: flex;
-          width: 40px;
-          height: 40px;
+          width: map-get($icon-wrapper-sizes, s);
+          height: map-get($icon-wrapper-sizes, s);
           flex-grow: 0;
           flex-shrink: 0;
-          position: relative;
-          align-items: center;
-          justify-content: center;
 
           &::before {
-            content: "";
-            display: block;
-            box-sizing: border-box;
-            width: 28px;
-            height: 28px;
-            border: map-get($spacers, 1) solid map-get($theme-color-accent, darker);
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            z-index: -1;
+            width: 1.75rem;
+            height: 1.75rem;
+            border-width: map-get($spacers, 1);
+            border-color: map-get($theme-color-accent, darker);
             background-color: map-get($theme-color-primary, reverse);
             box-shadow: 0 0 map-get($spacers, 2) fade-out(map-get($theme-color-accent, lighter), .36);
-            transform-origin: center;
-            transform: translate(-50%, -50%)
-              rotate(45deg);
             transition: transform .32s cubic-bezier(0, -0.8, .4, 1.25);
           }
         }
@@ -120,7 +107,7 @@ export default {
             to right,
             fade-out(map-get($theme-color-accent, lighter), .52),
             transparent);
-          transform: translateY(6px);
+          transform: translateY(.375rem);
         }
 
         .contact-item__link__icon-wrapper::before {
@@ -137,8 +124,6 @@ export default {
       margin-bottom: map-get($spacers, 4);
 
       &__link {
-        display: inline-flex;
-
         &::before {
           width: map-get($spacers, 7);
           height: map-get($spacers, 1);
@@ -153,16 +138,16 @@ export default {
         }
 
         &__icon {
-          width: map-get($spacers, 5);
-          height: map-get($spacers, 5);
+          width: map-get($icon-sizes, m);
+          height: map-get($icon-sizes, m);
 
           &-wrapper {
-            width: map-get($spacers, 8);
-            height: map-get($spacers, 8);
+            width: map-get($icon-wrapper-sizes, m);
+            height: map-get($icon-wrapper-sizes, m);
 
             &::before {
-              width: 34px;
-              height: 34px;
+              width: 2.125rem;
+              height: 2.125rem;
             }
           }
         }

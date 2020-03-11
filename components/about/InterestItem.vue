@@ -1,6 +1,6 @@
 <template>
   <li class="interests-item">
-    <div class="interests-item__icon-wrapper">
+    <div class="interests-item__icon-wrapper icon-wrapper icon-wrapper--circle">
       <svg-icon class="interests-item__icon" :name="icon" />
     </div>
     <div class="interests-item__name font-mono font-mono--small">{{ name }}</div>
@@ -20,32 +20,20 @@ export default {
 .interests {
   display: flex;
   position: relative;
-  margin-top: map-get($spacers, 10); // calculate from font line-height + half item-icn wrapper + 32
-  margin-bottom: map-get($spacers, 8); // calculate from font line-height + half item-icn wrapper
+  margin-top: map-get($spacers, 10);
+  margin-bottom: map-get($spacers, 8);
   align-items: center;
   justify-content: center;
 
-  &__icon {
-    width: map-get($spacers, 7);
-    height: map-get($spacers, 7);
+  &__icon-wrapper {
+    border: map-get($spacers, 1) solid map-get($theme-color-secondary, base);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    background-color: map-get($theme-color-primary, base);
     fill: map-get($theme-color-primary, reverse);
-
-    &-wrapper {
-      display: flex;
-      box-sizing: border-box;
-      width: map-get($spacers, 9);
-      height: map-get($spacers, 9);
-      border: map-get($spacers, 1) solid map-get($theme-color-secondary, base);
-      align-items: center;
-      justify-content: center;
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      background-color: map-get($theme-color-primary, base);
-      border-radius: 50%;
-      box-shadow: 0 0 map-get($spacers, 2) fade-out(map-get($theme-color-secondary, base), .52);
-      transform: translate(-50%, -50%);
-    }
+    box-shadow: 0 0 map-get($spacers, 2) fade-out(map-get($theme-color-secondary, base), .52);
+    transform: translate(-50%, -50%);
   }
 
   &__list {
@@ -64,18 +52,14 @@ export default {
     position: absolute;
 
     &__icon {
-      width: map-get($spacers, 6);
-      height: map-get($spacers, 6);
+      width: map-get($icon-sizes, l);
+      height: map-get($icon-sizes, l);
       fill: map-get($theme-color-primary, lighter-3);
 
       &-wrapper {
-        display: flex;
-        width: map-get($spacers, 8);
-        height: map-get($spacers, 8);
-        align-items: center;
-        justify-content: center;
+        width: map-get($icon-wrapper-sizes, m);
+        height: map-get($icon-wrapper-sizes, m);
         background-color: map-get($theme-color-primary, base);
-        border-radius: 50%;
       }
     }
 
@@ -145,10 +129,7 @@ export default {
     }
   }
 
-  @media screen and (min-width: $breakpoint-m) {
-    width: 20rem;
-    height: 20rem;
-
+  @media screen and (min-width: $breakpoint-xs) {
     &__icon {
       width: 2.5rem;
       height: 2.5rem;
@@ -167,12 +148,12 @@ export default {
 
     &-item {
       &__icon {
-        width: map-get($spacers, 7);
-        height: map-get($spacers, 7);
+        width: map-get($icon-sizes, xl);
+        height: map-get($icon-sizes, xl);
 
         &-wrapper {
-          width: map-get($spacers, 9);
-          height: map-get($spacers, 9);
+          width: map-get($icon-wrapper-sizes, l);
+          height: map-get($icon-wrapper-sizes, l);
         }
       }
     }

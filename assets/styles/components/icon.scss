@@ -1,0 +1,47 @@
+$icon-sizes-suffix: s, m, l, xl;
+$icon-wrapper-sizes-suffix: s, m, l;
+
+.icon {
+  @each $size in $icon-sizes-suffix {
+    &--#{$size} {
+      width: map-get($icon-sizes, $size);
+      height: map-get($icon-sizes, $size);
+    }
+  }
+
+  &-wrapper {
+    display: flex;
+    box-sizing: border-box;
+    align-items: center;
+    justify-content: center;
+
+    @each $size in $icon-wrapper-sizes-suffix {
+      &--#{$size} {
+        width: map-get($icon-wrapper-sizes, $size);
+        height: map-get($icon-wrapper-sizes, $size);
+      }
+    }
+
+    &--circle {
+      border-radius: 50%;
+    }
+
+    &--square {
+      position: relative;
+
+      &::before {
+        content: "";
+        display: block;
+        box-sizing: border-box;
+        position: absolute;
+        border-style: solid;
+        top: 50%;
+        left: 50%;
+        z-index: -1;
+        transform-origin: center;
+        transform: translate(-50%, -50%)
+          rotate(45deg);
+      }
+    }
+  }
+}

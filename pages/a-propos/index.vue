@@ -46,8 +46,8 @@
       <section class="section section--half">
         <h2 class="heading--second">Intérêts</h2>
         <div class="interests">
-          <div class="interests__icon-wrapper">
-            <svg-icon class="interests__icon" name="heart" />
+          <div class="interests__icon-wrapper icon-wrapper icon-wrapper--l icon-wrapper--circle">
+            <svg-icon class="icon icon--xl" name="heart" />
           </div>
           <ul class="interests__list">
             <InterestItem v-for="(interest, id) in interests"
