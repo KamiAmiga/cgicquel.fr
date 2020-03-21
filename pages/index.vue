@@ -1,9 +1,10 @@
 <template>
   <div class="homepage">
-    <h1>
-      <span class="font-sans--md-capitalized">Camille Gicquel</span>
-      <span class="heading--main">UI Design & Intégration</span>
+    <h1 class="homepage__title-container">
+      <span class="homepage__title-sub font-sans--md-capitalized">Camille Gicquel</span>
+      <span class="homepage__title-main">UI Design & Intégration</span>
     </h1>
+
     <div class="homepage__illustration">
       <div class="homepage__illustration__cityscape">
         <div class="homepage__illustration__skyline
@@ -111,13 +112,57 @@ $triangle-reverse-angle: 46.667deg;
   display: block;
   width: 100%;
   max-width: $container-max-width;
+  min-height: 100vh;
   position: relative;
   margin: 0 auto;
+  overflow-x: hidden;
+
+  &__title {
+    &-container {
+      position: absolute;
+      margin: 0;
+      left: 0;
+      bottom: 6rem;
+      z-index: map-get($z-index, base-increase);
+    }
+
+    &-sub {
+      display: inline-block;
+      margin: 0 0 map-get($spacers, 5) map-get($spacers, 7);
+    }
+
+    &-main {
+      // turn into mixin
+      font-size: $font-size-base * $font-size-scale-ratio * $font-size-scale-ratio * $font-size-scale-ratio;
+      color: map-get($theme-color-primary, reverse);
+      font-weight: $font-weight-semibold;
+      line-height: $line-height-small;
+      letter-spacing: $letter-spacing-small-2;
+      // turn into mixin
+      display: inline-block;
+      box-sizing: border-box;
+      padding: map-get($spacers, 4)
+        map-get($spacers, 4)
+        map-get($spacers, 4)
+        (map-get($spacers, 7) - map-get($spacers, 2));
+      border-left: map-get($spacers, 2) solid map-get($theme-color-secondary, darker);
+      background: linear-gradient(
+        to right,
+        fade-out(map-get($theme-color-secondary, darker), .68),
+        16.5%,
+        fade-out(map-get($theme-color-secondary, darker), 1) 50%,
+      );
+    }
+  }
 
   &__illustration {
-    min-height: 100vh;
+    width: 100%;
     min-width: 20rem;
+    max-width: 25rem;
+    min-height: 100vh;
     position: absolute;
+    right: map-get($spacers, 7) * -1;
+    z-index: map-get($z-index, base);
     overflow: hidden;
 
     &__skyline {
@@ -620,6 +665,55 @@ $triangle-reverse-angle: 46.667deg;
         );
         transform: translate(-50%, -50%);
       }
+    }
+  }
+
+  @media screen and (min-width: $breakpoint-m) {
+    overflow: hidden;
+
+    &__title {
+      &-container {
+        box-sizing: border-box;
+        width: 50%;
+        padding-left: map-get($spacers, 4);
+        bottom: 50%;
+        transform: translateY(50%);
+      }
+
+      &-sub {
+        margin-bottom: map-get($spacers, 8);
+      }
+
+      &-main {
+        // turn into mixin
+        font-size: $font-size-base * $font-size-scale-ratio * $font-size-scale-ratio * $font-size-scale-ratio * $font-size-scale-ratio * $font-size-scale-ratio;
+        color: map-get($theme-color-primary, reverse);
+        font-weight: $font-weight-semibold;
+        line-height: $line-height-small;
+        letter-spacing: $letter-spacing-small-1;
+        // turn into mixin
+        border-left: none;
+        position: relative;
+
+        &::after {
+          content: "";
+          display: block;
+          width: 50%;
+          height: map-get($spacers, 3);
+          position: absolute;
+          top: 100%;
+          left: 0;
+          background-color: map-get($theme-color-secondary, darker);
+        }
+      }
+    }
+
+    &__illustration {
+      box-sizing: border-box;
+      width: 50%;
+      max-width: 36rem;
+      top: 12%;
+      right: 0;
     }
   }
 }
