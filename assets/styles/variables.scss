@@ -110,3 +110,14 @@ $breakpoint-m: 60rem;
 $breakpoint-l: 80rem;
 
 $container-max-width: 82rem;
+
+
+//
+// Z-index
+//
+
+$z-index: (
+  base: 0,
+  base-increase: 1,
+  base-decrease: -1,
+);
