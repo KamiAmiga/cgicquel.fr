@@ -1,7 +1,8 @@
 <template>
   <main role="main">
     <Header title="A propos"
-      small />
+      small
+      color="accent" />
 
     <div class="content">
       <section class="section section--full">

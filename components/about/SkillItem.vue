@@ -90,9 +90,11 @@ $skill-grid-gap: .0625rem;
       .skill__group--#{$name} & {
         background: linear-gradient(
           to top right,
-          fade-out(map-get($theme-color, darker), .68),
+          fade-out(map-get($theme-color, darker),
+            map-get($fading-out, 5)),
           33%,
-          fade-out(map-get($theme-color, base), .92)
+          fade-out(map-get($theme-color, base),
+            map-get($fading-out, 2))
         );
         border: .0625rem solid map-get($theme-color, base);
       }

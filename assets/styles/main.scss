@@ -191,7 +191,8 @@
       box-shadow: (map-get($spacers, 2) * -1)
         map-get($spacers, 1)
         map-get($spacers, 2)
-        fade-out(map-get($theme-color-secondary, lighter), .68);
+        fade-out(map-get($theme-color-secondary, lighter),
+          map-get($fading-out, 5));
     }
   }
 }

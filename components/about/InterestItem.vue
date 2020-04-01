@@ -32,7 +32,11 @@ export default {
     left: 50%;
     background-color: map-get($theme-color-primary, base);
     fill: map-get($theme-color-primary, reverse);
-    box-shadow: 0 0 map-get($spacers, 2) fade-out(map-get($theme-color-secondary, base), .52);
+    box-shadow: 0
+      0
+      map-get($spacers, 2)
+      fade-out(map-get($theme-color-secondary, base),
+        map-get($fading-out, 6));
     transform: translate(-50%, -50%);
   }
 

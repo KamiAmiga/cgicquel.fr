@@ -1,92 +1,96 @@
 <template>
   <div class="homepage">
-    <h1 class="homepage__title-container">
-      <span class="homepage__title-sub font-sans--md-capitalized">Camille Gicquel</span>
-      <span class="homepage__title-main">UI Design & Intégration</span>
-    </h1>
+    <div class="homepage__bg-triangle homepage__bg-triangle--1"></div>
+    <div class="homepage__bg-triangle homepage__bg-triangle--2"></div>
+    <div class="homepage__bg-triangle homepage__bg-triangle--3"></div>
+    <div class="homepage__bg-triangle homepage__bg-triangle--4"></div>
+    <div class="homepage__bg-triangle homepage__bg-triangle--5"></div>
+    <div class="homepage__bg-line homepage__bg-line--1"></div>
+    <div class="homepage__bg-line homepage__bg-line--2"></div>
+    <div class="homepage__bg-line homepage__bg-line--3"></div>
 
-    <div class="homepage__illustration">
-      <div class="homepage__illustration__cityscape">
-        <div class="homepage__illustration__skyline
-          homepage__illustration__skyline--left-1"></div>
-        <div class="homepage__illustration__skyline
-          homepage__illustration__skyline--right-1
-          homepage__illustration__skyline--dashes"></div>
-        <div class="homepage__illustration__skyline
-          homepage__illustration__skyline--right-2"></div>
-        <div class="homepage__illustration__skyline
-          homepage__illustration__skyline--right-3
-          homepage__illustration__skyline--dashes"></div>
+    <div class="homepage__content-wrapper">
+      <h1 class="homepage__title-container">
+        <span class="homepage__title-sub font-sans--md-capitalized">Camille Gicquel</span>
+        <span class="homepage__title-main">UI Design & Intégration</span>
+      </h1>
 
-        <div class="homepage__illustration__cityscape__building
-          homepage__illustration__cityscape__building--back-left-1">
-          <div class="homepage__illustration__cityscape__building__lights
-            homepage__illustration__cityscape__building__lights--back-left-1"></div>
-        </div>
-        <div class="homepage__illustration__cityscape__building
-          homepage__illustration__cityscape__building--back-left-2"></div>
-        <div class="homepage__illustration__cityscape__building
-          homepage__illustration__cityscape__building--back-left-3"></div>
-        <div class="homepage__illustration__cityscape__building
-          homepage__illustration__cityscape__building--back-center-1"></div>
-        <div class="homepage__illustration__cityscape__building
-          homepage__illustration__cityscape__building--back-center-2"></div>
-        <div class="homepage__illustration__cityscape__building
-          homepage__illustration__cityscape__building--back-right-1">
-          <div class="homepage__illustration__cityscape__building__lights
-            homepage__illustration__cityscape__building__lights--back-right-1"></div>
-        </div>
-        <div class="homepage__illustration__cityscape__building
-          homepage__illustration__cityscape__building--back-right-2"></div>
-        <div class="homepage__illustration__cityscape__building
-          homepage__illustration__cityscape__building--back-right-3"></div>
-        <div class="homepage__illustration__cityscape__building
-          homepage__illustration__cityscape__building--fore-left">
-          <img class="homepage__illustration__cityscape__building__image
-            homepage__illustration__cityscape__building__image--left"
-            src=""
-            alt="">
-        </div>
-        <div class="homepage__illustration__cityscape__building
-          homepage__illustration__cityscape__building--fore-right">
-          <img class="homepage__illustration__cityscape__building__image
-            homepage__illustration__cityscape__building__image--right"
-            src=""
-            alt="">
-        </div>
-        <div class="homepage__illustration__cityscape__light
-          homepage__illustration__cityscape__light--left"></div>
-        <div class="homepage__illustration__cityscape__light
-          homepage__illustration__cityscape__light--right"></div>
-      </div>
+      <div class="homepage__illustration">
+        <div class="homepage__illustration__cityscape">
+          <div class="homepage__illustration__skyline
+            homepage__illustration__skyline--left-1"></div>
+          <div class="homepage__illustration__skyline
+            homepage__illustration__skyline--right-1
+            homepage__illustration__skyline--dashes"></div>
+          <div class="homepage__illustration__skyline
+            homepage__illustration__skyline--right-2"></div>
+          <div class="homepage__illustration__skyline
+            homepage__illustration__skyline--right-3
+            homepage__illustration__skyline--dashes"></div>
 
-      <div class="homepage__illustration__horizon">
-        <div class="homepage__illustration__horizon__line"></div>
-        <div class="homepage__illustration__horizon__shape-container">
-          <div class="homepage__illustration__horizon__shape">
-            <div class="homepage__illustration__horizon__shape__inner
-              homepage__illustration__horizon__shape__inner--dark"></div>
-            <div class="homepage__illustration__horizon__shape__inner
-              homepage__illustration__horizon__shape__inner--light"></div>
+          <div class="homepage__illustration__cityscape__building
+            homepage__illustration__cityscape__building--back-left-1">
+            <div class="homepage__illustration__cityscape__building__lights
+              homepage__illustration__cityscape__building__lights--back-left-1"></div>
           </div>
+          <div class="homepage__illustration__cityscape__building
+            homepage__illustration__cityscape__building--back-left-2"></div>
+          <div class="homepage__illustration__cityscape__building
+            homepage__illustration__cityscape__building--back-left-3"></div>
+          <div class="homepage__illustration__cityscape__building
+            homepage__illustration__cityscape__building--back-center-1"></div>
+          <div class="homepage__illustration__cityscape__building
+            homepage__illustration__cityscape__building--back-center-2"></div>
+          <div class="homepage__illustration__cityscape__building
+            homepage__illustration__cityscape__building--back-right-1">
+            <div class="homepage__illustration__cityscape__building__lights
+              homepage__illustration__cityscape__building__lights--back-right-1"></div>
+          </div>
+          <div class="homepage__illustration__cityscape__building
+            homepage__illustration__cityscape__building--back-right-2"></div>
+          <div class="homepage__illustration__cityscape__building
+            homepage__illustration__cityscape__building--back-right-3"></div>
+          <div class="homepage__illustration__cityscape__building
+            homepage__illustration__cityscape__building--fore-left">
+            <img class="homepage__illustration__cityscape__building__image
+              homepage__illustration__cityscape__building__image--left"
+              src=""
+              alt="">
+          </div>
+          <div class="homepage__illustration__cityscape__building
+            homepage__illustration__cityscape__building--fore-right">
+            <img class="homepage__illustration__cityscape__building__image
+              homepage__illustration__cityscape__building__image--right"
+              src=""
+              alt="">
+          </div>
+          <div class="homepage__illustration__cityscape__light
+            homepage__illustration__cityscape__light--left"></div>
+          <div class="homepage__illustration__cityscape__light
+            homepage__illustration__cityscape__light--right"></div>
         </div>
-      </div>
 
-      <div class="homepage__illustration__ground">
-        <div class="homepage__illustration__skyline
-          homepage__illustration__skyline--left-2"></div>
-        <div class="homepage__illustration__skyline
-          homepage__illustration__skyline--right-4"></div>
-        <div class="homepage__illustration__skyline
-          homepage__illustration__skyline--right-5
-          homepage__illustration__skyline--dashes"></div>
+        <div class="homepage__illustration__horizon">
+          <div class="homepage__illustration__horizon__line"></div>
+          <div class="homepage__illustration__horizon__shape"></div>
+        </div>
 
-        <div class="homepage__illustration__ground__shape"></div>
-        <div class="homepage__illustration__ground__reflexion
-          homepage__illustration__ground__reflexion--left"></div>
-        <div class="homepage__illustration__ground__reflexion
-          homepage__illustration__ground__reflexion--right"></div>
-        <div class="homepage__illustration__ground__light"></div>
+        <div class="homepage__illustration__ground">
+          <div class="homepage__illustration__skyline
+            homepage__illustration__skyline--left-2"></div>
+          <div class="homepage__illustration__skyline
+            homepage__illustration__skyline--right-4"></div>
+          <div class="homepage__illustration__skyline
+            homepage__illustration__skyline--right-5
+            homepage__illustration__skyline--dashes"></div>
+
+          <div class="homepage__illustration__ground__shape"></div>
+          <div class="homepage__illustration__ground__reflexion
+            homepage__illustration__ground__reflexion--left"></div>
+          <div class="homepage__illustration__ground__reflexion
+            homepage__illustration__ground__reflexion--right"></div>
+          <div class="homepage__illustration__ground__light"></div>
+        </div>
       </div>
     </div>
   </div>
@@ -100,22 +104,35 @@
 // Variables
 //
 
-$triangle-ratio: 86.667%;
+$triangle-ratio: .867;
 $triangle-base-angle: 30deg;
-$triangle-reverse-angle: 46.667deg;
+
+$bg-lines:
+  1 88% dashed 0 53% .08,
+  2 67% solid 0 50% .16,
+  3 86% solid 58% 0 .08;
+
+$bg-triangles:
+  1 5.75rem map-get($theme-color-primary, reverse) 13.25rem -41rem,
+  2 13.25rem map-get($theme-color-accent, lighter) 0 -40rem,
+  3 5.875rem none 5rem -36.25rem 1,
+  4 9.375rem map-get($theme-color-primary, reverse) 6.875rem -35.25rem .16,
+  5 4.75rem map-get($theme-color-accent, lighter) 9.875rem -31rem;
 
 //
 // Styling
 //
 
 .homepage {
-  display: block;
-  width: 100%;
-  max-width: $container-max-width;
-  min-height: 100vh;
-  position: relative;
-  margin: 0 auto;
-  overflow-x: hidden;
+  &__content-wrapper {
+    display: block;
+    width: 100%;
+    max-width: $container-max-width;
+    min-height: 100vh;
+    position: relative;
+    margin: 0 auto;
+    overflow-x: hidden;
+  }
 
   &__title {
     &-container {
@@ -148,9 +165,11 @@ $triangle-reverse-angle: 46.667deg;
       border-left: map-get($spacers, 2) solid map-get($theme-color-secondary, darker);
       background: linear-gradient(
         to right,
-        fade-out(map-get($theme-color-secondary, darker), .68),
+        fade-out(map-get($theme-color-secondary, darker),
+          map-get($fading-out, 5)),
         16.5%,
-        fade-out(map-get($theme-color-secondary, darker), 1) 50%,
+        fade-out(map-get($theme-color-secondary, darker),
+          map-get($fading-out, 0)) 50%,
       );
     }
   }
@@ -177,7 +196,7 @@ $triangle-reverse-angle: 46.667deg;
         border-top-style: solid;
         left: 0;
         bottom: 0;
-        opacity: .08;
+        opacity: map-get($opacities, 2);
         transform-origin: top left;
       }
 
@@ -186,7 +205,7 @@ $triangle-reverse-angle: 46.667deg;
         border-top-style: dashed;
         top: 9.375%;
         right: 10.546%;
-        opacity: .32;
+        opacity: map-get($opacities, 5);
         transform-origin: top right;
       }
 
@@ -195,7 +214,7 @@ $triangle-reverse-angle: 46.667deg;
         border-top-style: solid;
         top: 9.375%;
         right: 2.685%;
-        opacity: .48;
+        opacity: map-get($opacities, 6);
         transform-origin: top right;
       }
 
@@ -204,7 +223,7 @@ $triangle-reverse-angle: 46.667deg;
         border-top-style: dashed;
         right: 0;
         bottom: 21%;
-        opacity: .16;
+        opacity: map-get($opacities, 3);
         transform-origin: top right;
       }
 
@@ -213,7 +232,7 @@ $triangle-reverse-angle: 46.667deg;
         border-top-style: solid;
         top: 3.125%;
         left: 6.757%;
-        opacity: .04;
+        opacity: map-get($opacities, 1);
         transform-origin: top right;
       }
 
@@ -222,7 +241,7 @@ $triangle-reverse-angle: 46.667deg;
         border-top-style: solid;
         top: 9.375%;
         right: 6.757%;
-        opacity: .04;
+        opacity: map-get($opacities, 1);
         transform-origin: top right;
       }
 
@@ -231,7 +250,7 @@ $triangle-reverse-angle: 46.667deg;
         border-top-style: dashed;
         top: 15.625%;
         right: 9.459%;
-        opacity: .08;
+        opacity: map-get($opacities, 2);
         transform-origin: top right;
       }
     }
@@ -268,16 +287,20 @@ $triangle-reverse-angle: 46.667deg;
               left: 27.778%;
               background: linear-gradient(
                 to bottom,
-                fade-out(map-get($theme-color-fourth, darker), 1),
-                fade-out(map-get($theme-color-primary, reverse), .84),
+                fade-out(map-get($theme-color-fourth, darker),
+                  map-get($fading-out, 0)),
+                fade-out(map-get($theme-color-primary, reverse),
+                  map-get($fading-out, 3)),
               );
 
               &::before,
               &::after {
                 background: linear-gradient(
                   to bottom,
-                  fade-out(map-get($theme-color-fourth, darker), 1),
-                  fade-out(map-get($theme-color-primary, reverse), .84),
+                  fade-out(map-get($theme-color-fourth, darker),
+                    map-get($fading-out, 0)),
+                  fade-out(map-get($theme-color-primary, reverse),
+                    map-get($fading-out, 3)),
                 );
               }
 
@@ -296,16 +319,20 @@ $triangle-reverse-angle: 46.667deg;
               right: 30.769%;
               background: linear-gradient(
                 to bottom,
-                fade-out(map-get($theme-color-tertiary, darker), .92),
-                fade-out(map-get($theme-color-tertiary, base), .52),
+                fade-out(map-get($theme-color-tertiary, darker),
+                  map-get($fading-out, 2)),
+                fade-out(map-get($theme-color-tertiary, base),
+                  map-get($fading-out, 6)),
               );
 
               &::before,
               &::after {
                 background: linear-gradient(
                   to bottom,
-                  fade-out(map-get($theme-color-tertiary, darker), .92),
-                  fade-out(map-get($theme-color-tertiary, base), .52),
+                  fade-out(map-get($theme-color-tertiary, darker),
+                    map-get($fading-out, 2)),
+                  fade-out(map-get($theme-color-tertiary, base),
+                    map-get($fading-out, 6)),
                 );
               }
 
@@ -327,7 +354,11 @@ $triangle-reverse-angle: 46.667deg;
             left: 18.92%;
             z-index: map-get($z-index, base-increase);
             background: white;
-            box-shadow: 0 0 map-get($spacers, 2) fade-out(map-get($theme-color-fourth, lighter), .36);
+            box-shadow: 0
+              0
+              map-get($spacers, 2)
+              fade-out(map-get($theme-color-fourth, lighter),
+                map-get($fading-out, 7));
             transform-origin: top left;
             transform: skewY($triangle-base-angle);
           }
@@ -338,7 +369,11 @@ $triangle-reverse-angle: 46.667deg;
             left: 43.243%;
             z-index: map-get($z-index, base-increase);
             background: white;
-            box-shadow: 0 0 map-get($spacers, 2) fade-out(map-get($theme-color-tertiary, lighter), .36);
+            box-shadow: 0
+              0
+              map-get($spacers, 2)
+              fade-out(map-get($theme-color-tertiary, lighter),
+                map-get($fading-out, 7));
             transform-origin: top right;
             transform: skewY($triangle-base-angle * -1);
           }
@@ -365,9 +400,11 @@ $triangle-reverse-angle: 46.667deg;
             left: 8.784%;
             background: linear-gradient(
               to bottom,
-              fade-out(map-get($theme-color-fourth, darker), .92),
+              fade-out(map-get($theme-color-fourth, darker),
+                map-get($fading-out, 2)),
               33%,
-              fade-out(map-get($theme-color-fourth, base), .68)
+              fade-out(map-get($theme-color-fourth, base),
+                map-get($fading-out, 5))
             );
             transform-origin: top right;
             transform: skewY($triangle-base-angle * -1);
@@ -380,8 +417,10 @@ $triangle-reverse-angle: 46.667deg;
             z-index: map-get($z-index, base-decrease);
             background: linear-gradient(
               to bottom,
-              fade-out(map-get($theme-color-primary, reverse), .96),
-              fade-out(map-get($theme-color-primary, reverse), .2)
+              fade-out(map-get($theme-color-primary, reverse),
+                map-get($fading-out, 1)),
+              fade-out(map-get($theme-color-primary, reverse),
+                map-get($fading-out, 8))
             );
           }
 
@@ -394,7 +433,8 @@ $triangle-reverse-angle: 46.667deg;
               to bottom,
               transparent,
               67%,
-              fade-out(map-get($theme-color-primary, reverse), .2)
+              fade-out(map-get($theme-color-primary, reverse),
+                map-get($fading-out, 8))
             );
           }
 
@@ -405,9 +445,11 @@ $triangle-reverse-angle: 46.667deg;
             z-index: map-get($z-index, base-decrease);
             background: linear-gradient(
               to bottom,
-              fade-out(map-get($theme-color-accent, darker), .92),
+              fade-out(map-get($theme-color-accent, darker),
+                map-get($fading-out, 2)),
               33%,
-              fade-out(map-get($theme-color-tertiary, lighter), .84),
+              fade-out(map-get($theme-color-tertiary, lighter),
+                map-get($fading-out, 3)),
             );
             transform-origin: top right;
             transform: skewY($triangle-base-angle * -1);
@@ -420,9 +462,11 @@ $triangle-reverse-angle: 46.667deg;
             z-index: map-get($z-index, base-decrease);
             background: linear-gradient(
               to bottom,
-              fade-out(map-get($theme-color-primary, reverse), .96),
+              fade-out(map-get($theme-color-primary, reverse),
+                map-get($fading-out, 1)),
               67%,
-              fade-out(map-get($theme-color-primary, reverse), .52),
+              fade-out(map-get($theme-color-primary, reverse),
+                map-get($fading-out, 6)),
             );
           }
 
@@ -432,9 +476,11 @@ $triangle-reverse-angle: 46.667deg;
             left: 70.95%;
             background: linear-gradient(
               to bottom,
-              fade-out(map-get($theme-color-primary, base), .92),
+              fade-out(map-get($theme-color-primary, base),
+                map-get($fading-out, 2)),
               33%,
-              fade-out(map-get($theme-color-secondary, darker), .2)
+              fade-out(map-get($theme-color-secondary, darker),
+                map-get($fading-out, 8))
             );
             transform-origin: top right;
             transform: skewY($triangle-base-angle * -1);
@@ -447,9 +493,11 @@ $triangle-reverse-angle: 46.667deg;
             z-index: map-get($z-index, base-decrease);
             background: linear-gradient(
               to bottom,
-              fade-out(map-get($theme-color-tertiary, darker), 1),
+              fade-out(map-get($theme-color-tertiary, darker),
+                map-get($fading-out, 0)),
               67%,
-              fade-out(map-get($theme-color-tertiary, base), .52)
+              fade-out(map-get($theme-color-tertiary, base),
+                map-get($fading-out, 6))
             );
           }
 
@@ -460,9 +508,11 @@ $triangle-reverse-angle: 46.667deg;
             z-index: map-get($z-index, base-decrease);
             background: linear-gradient(
               to bottom,
-              fade-out(map-get($theme-color-secondary, lighter), .92),
+              fade-out(map-get($theme-color-secondary, lighter),
+                map-get($fading-out, 2)),
               33%,
-              fade-out(map-get($theme-color-tertiary, base), .68)
+              fade-out(map-get($theme-color-tertiary, base),
+                map-get($fading-out, 5))
             );
             transform-origin: top left;
             transform: skewY($triangle-base-angle);
@@ -482,9 +532,11 @@ $triangle-reverse-angle: 46.667deg;
           left: 5.405%;
           background: radial-gradient(
             circle closest-side,
-            fade-out(map-get($theme-color-fourth, lighter), .52),
+            fade-out(map-get($theme-color-fourth, lighter),
+              map-get($fading-out, 6)),
             67%,
-            fade-out(map-get($theme-color-fourth, darker), 1),
+            fade-out(map-get($theme-color-fourth, darker),
+              map-get($fading-out, 0)),
           );
         }
 
@@ -494,8 +546,10 @@ $triangle-reverse-angle: 46.667deg;
           left: 21.622%;
           background: radial-gradient(
             circle closest-side,
-            fade-out(map-get($theme-color-tertiary, lighter), .36),
-            fade-out(map-get($theme-color-tertiary, darker), 1),
+            fade-out(map-get($theme-color-tertiary, lighter),
+              map-get($fading-out, 7)),
+            fade-out(map-get($theme-color-tertiary, darker),
+              map-get($fading-out, 0)),
           );
         }
       }
@@ -511,79 +565,50 @@ $triangle-reverse-angle: 46.667deg;
         height: map-get($spacers, 1);
         background-color: map-get($theme-color-accent, lighter);
         border-radius: .0625rem;
-        box-shadow: 0 0 map-get($spacers, 1) fade-out(map-get($theme-color-accent, lighter), .36);
+        box-shadow: 0
+          0
+          map-get($spacers, 1)
+          fade-out(map-get($theme-color-accent, lighter),
+            map-get($fading-out, 7));
       }
 
       &__shape {
-        width: 100%;
-        height: 100%;
+        width: 12.5%;
+        padding-bottom: 14.375%;
         position: absolute;
-        overflow: hidden;
-        transform-origin: bottom right;
-        transform: skewX($triangle-base-angle);
+        top: 0;
+        left: 29.514%;
+        clip-path: polygon(100% 0, 0 50%, 100% 100%);
+        background: linear-gradient(
+          to right,
+          map-get($theme-color-accent, base),
+          67%,
+          map-get($theme-color-accent, darker)
+        );
+        transform: translateY(-50%);
 
-        &-container {
-          width: 14.375%;
-          padding-bottom: 14.375%;
+        &::before,
+        &::after {
+          content: "";
           position: absolute;
-          top: 0;
-          left: 29.375%;
-          transform: translateY(-50%) rotate(-90deg);
+          clip-path: polygon(100% 0, 0 50%, 100% 100%);
         }
 
         &::before {
-          content: "";
-          width: 100%;
-          height: 100%;
-          position: absolute;
-          background: linear-gradient(
-            to bottom,
-            map-get($theme-color-accent, base),
-            67%,
-            map-get($theme-color-accent, darker)
-          );
-          box-shadow: -1px
-            0
-            map-get($spacers, 2)
-            fade-out(map-get($theme-color-accent, lighter), .8);
-          transform-origin: bottom left;
-          transform: skewX($triangle-reverse-angle * -1);
+          width: 50%;
+          padding-bottom: 56.94%;
+          top: 50%;
+          left: 25%;
+          background-color: map-get($theme-color-primary, base);
+          transform: translateY(-50%);
         }
 
-        &__inner {
-          position: absolute;
-          overflow: hidden;
-
-          &::before {
-            content: "";
-            width: 100%;
-            height: 100%;
-            position: absolute;
-            transform-origin: bottom right;
-            transform: skewX($triangle-reverse-angle * -1);
-          }
-
-          &--dark {
-            width: 50%;
-            padding-bottom: 50%;
-            top: 25%;
-            right: 12.5%;
-
-            &::before {
-              background-color: map-get($theme-color-primary, base);
-            }
-          }
-
-          &--light {
-            width: 20%;
-            padding-bottom: 20%;
-            top: 66%;
-            right: 25%;
-
-            &::before {
-              background-color: map-get($theme-color-primary, reverse);
-            }
-          }
+        &::after {
+          width: 20%;
+          padding-bottom: 22.222%;
+          right: 16.5%;
+          bottom: 50%;
+          background-color: map-get($theme-color-primary, reverse);
         }
       }
     }
@@ -599,25 +624,15 @@ $triangle-reverse-angle: 46.667deg;
         width: 100%;
         height: 100%;
         position: absolute;
-        overflow: hidden;
-        transform-origin: top left;
-        transform: skewX($triangle-base-angle);
-
-        &::before {
-          content: "";
-          display: block;
-          width: 100%;
-          height: 100%;
-          position: absolute;
-          background: linear-gradient(
-            to bottom,
-            fade-out(map-get($theme-color-accent, lighter), .84),
-            33%,
-            fade-out(map-get($theme-color-accent, darker), 1)
-          );
-          transform-origin: top right;
-          transform: skewX($triangle-reverse-angle * -1);
-        }
+        clip-path: polygon(100% 0, 0 0, 50% 100%);
+        background: linear-gradient(
+          to bottom,
+          fade-out(map-get($theme-color-accent, lighter),
+            map-get($fading-out, 3)),
+          33%,
+          fade-out(map-get($theme-color-accent, darker),
+            map-get($fading-out, 0))
+        );
       }
 
       &__reflexion {
@@ -631,8 +646,10 @@ $triangle-reverse-angle: 46.667deg;
           left: 18.92%;
           background: linear-gradient(
             to bottom,
-            fade-out(map-get($theme-color-fourth, darker), .76),
-            fade-out(map-get($theme-color-primary, base), 1),
+            fade-out(map-get($theme-color-fourth, darker),
+              map-get($fading-out, 4)),
+            fade-out(map-get($theme-color-primary, base),
+              map-get($fading-out, 0)),
           );
           transform-origin: top right;
           transform: skewY($triangle-base-angle);
@@ -644,8 +661,10 @@ $triangle-reverse-angle: 46.667deg;
           left: 43.243%;
           background: linear-gradient(
             to bottom,
-            fade-out(map-get($theme-color-tertiary, darker), .76),
-            fade-out(map-get($theme-color-primary, base), 1),
+            fade-out(map-get($theme-color-tertiary, darker),
+              map-get($fading-out, 4)),
+            fade-out(map-get($theme-color-primary, base),
+              map-get($fading-out, 0)),
           );
           transform-origin: top left;
           transform: skewY($triangle-base-angle * -1);
@@ -660,8 +679,10 @@ $triangle-reverse-angle: 46.667deg;
         left: 50%;
         background: radial-gradient(
           circle closest-side,
-          fade-out(map-get($theme-color-accent, darker), .68),
-          fade-out(map-get($theme-color-primary, base), 1),
+          fade-out(map-get($theme-color-accent, darker),
+            map-get($fading-out, 5)),
+          fade-out(map-get($theme-color-primary, base),
+            map-get($fading-out, 0)),
         );
         transform: translate(-50%, -50%);
       }
@@ -669,7 +690,47 @@ $triangle-reverse-angle: 46.667deg;
   }
 
   @media screen and (min-width: $breakpoint-m) {
+    position: relative;
     overflow: hidden;
+    background: linear-gradient(
+      to top,
+      fade-out(map-get($theme-color-accent, darker),
+        map-get($fading-out, 5)),
+      16.5%,
+      fade-out(map-get($theme-color-accent, base),
+        map-get($fading-out, 0)) 50%,
+    );
+
+    &__bg {
+      &-line {
+        width: 0;
+        position: absolute;
+        border-right-width: 2px;
+        border-right-color: map-get($theme-color-accent, lighter);
+        transform-origin: top right;
+        transform: rotate(60deg);
+
+        @each $number,
+          $height,
+          $border-style,
+          $vertical-position,
+          $horizontal-position,
+          $opacity
+          in $bg-lines {
+          &--#{$number} {
+            height: $height;
+            border-right-style: $border-style;
+            top: $vertical-position;
+            right: $horizontal-position;
+            opacity: $opacity;
+          }
+        }
+      }
+    }
+
+    &__content-wrapper {
+      overflow: hidden;
+    }
 
     &__title {
       &-container {
@@ -714,6 +775,95 @@ $triangle-reverse-angle: 46.667deg;
       max-width: 36rem;
       top: 12%;
       right: 0;
+    }
+  }
+
+  @media screen and (min-width: $breakpoint-l) {
+    &__bg {
+      &-triangle {
+        border-top-style: solid;
+        border-top-width: 1px;
+        position: absolute;
+        overflow: hidden;
+        left: 50%;
+
+        &::before,
+        &::after {
+          content: "";
+          width: 100%;
+          border-top-style: solid;
+          border-top-width: 1px;
+          position: absolute;
+          bottom: 0;
+        }
+
+        &::before {
+          right: 50%;
+          transform-origin: bottom right;
+          transform: rotate(60deg);
+        }
+
+        &::after {
+          left: 50%;
+          transform-origin: top left;
+          transform: rotate(-60deg);
+        }
+
+        @each $number,
+          $width,
+          $border-color,
+          $vertical-position,
+          $horizontal-position,
+          $opacity
+          in $bg-triangles {
+          &--#{$number} {
+            width: $width;
+            height: $width * $triangle-ratio;
+            top: $vertical-position;
+            transform: translateX($horizontal-position);
+
+            @if $opacity {
+              opacity: $opacity;
+            }
+            @else {
+              opacity: map-get($opacities, 2);
+            }
+
+            @if $border-color != none {
+              border-top-color: $border-color;
+
+              &::before,
+              &::after {
+                border-top-color: map-get($theme-color-primary, reverse);
+              }
+            }
+            @else {
+              border-top: $border-color;
+
+              &::before,
+              &::after {
+                content: $border-color;
+              }
+            }
+          }
+        }
+
+        &--2 {
+          border-top: none;
+        }
+
+        &--3 {
+          clip-path: polygon(100% 0, 0 0, 50% 100%);
+          background: linear-gradient(
+            to bottom,
+            fade-out(map-get($theme-color-secondary, darker),
+              map-get($fading-out, 5)),
+            33%,
+            fade-out(map-get($theme-color-secondary, darker),
+              map-get($fading-out, 0))
+          );
+        }
+      }
     }
   }
 }

@@ -1,7 +1,10 @@
 <template>
   <header
     class="header"
-    :class="{ 'header--small' : small }">
+    :class="[
+      { 'header--small' : small },
+      'header--color-' + color
+    ]">
     <div class="header__illustration"></div>
     <div class="header__title">
       <h1 class="heading--main">{{ title }}</h1>
@@ -13,7 +16,11 @@
 export default {
   props: {
     title: String,
-    small: Boolean
+    small: Boolean,
+    color: {
+      type: String,
+      default: 'accent'
+    }
   }
 }
 </script>
@@ -24,7 +31,7 @@ export default {
   display: flex;
   margin-bottom: map-get($spacers, 4);
   flex-direction: column;
-  justify-content: end;
+  justify-content: flex-end;
 
   &__title {
     box-sizing: border-box;
@@ -36,6 +43,19 @@ export default {
 
   &--small {
     height: 15rem;
+  }
+
+  &--color {
+    &-accent {
+      background: linear-gradient(
+        to bottom,
+        fade-out(map-get($theme-color-accent, base),
+          map-get($fading-out, 0)),
+        66%,
+        fade-out(map-get($theme-color-accent, darker),
+          map-get($fading-out, 5)),
+      );
+    }
   }
 
   @media screen and (min-width: $breakpoint-m) {

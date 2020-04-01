@@ -35,6 +35,29 @@ $theme-color-fourth: (
   lighter: #43ffc2,
 );
 
+$opacities: (
+  1: .04,
+  2: .08,
+  3: .16,
+  4: .24,
+  5: .32,
+  6: .48,
+  7: .64,
+  8: .8
+);
+
+$fading-out: (
+  0: 1,
+  1: 1 - map-get($opacities, 1),
+  2: 1 - map-get($opacities, 2),
+  3: 1 - map-get($opacities, 3),
+  4: 1 - map-get($opacities, 4),
+  5: 1 - map-get($opacities, 5),
+  6: 1 - map-get($opacities, 6),
+  7: 1 - map-get($opacities, 7),
+  8: 1 - map-get($opacities, 8),
+);
+
 
 //
 // Typography

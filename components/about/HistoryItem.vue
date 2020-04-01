@@ -93,6 +93,7 @@ $types:
     &__icon-wrapper {
       fill: map-get($theme-color-primary, base);
       border-width: map-get($spacers, 1);
+      border-style: solid;
       background-color: map-get($theme-color-primary, reverse);
       position: absolute;
       top: 50%;

@@ -64,7 +64,8 @@ export default {
         z-index: -2;
         background: linear-gradient(
           to right,
-          fade-out(map-get($theme-color-accent, lighter), .8),
+          fade-out(map-get($theme-color-accent, lighter),
+            map-get($fading-out, 4)),
           transparent);
         transform: translateY(0);
         transition: right .2s .1s ease-out,
@@ -88,7 +89,11 @@ export default {
             border-width: map-get($spacers, 1);
             border-color: map-get($theme-color-accent, darker);
             background-color: map-get($theme-color-primary, reverse);
-            box-shadow: 0 0 map-get($spacers, 2) fade-out(map-get($theme-color-accent, lighter), .36);
+            box-shadow: 0
+              0
+              map-get($spacers, 2)
+              fade-out(map-get($theme-color-accent, lighter),
+                map-get($fading-out, 7));
             transition: transform .32s cubic-bezier(0, -0.8, .4, 1.25);
           }
         }
@@ -105,7 +110,8 @@ export default {
           right: 0;
           background: linear-gradient(
             to right,
-            fade-out(map-get($theme-color-accent, lighter), .52),
+            fade-out(map-get($theme-color-accent, lighter),
+              map-get($fading-out, 6)),
             transparent);
           transform: translateY(.375rem);
         }
