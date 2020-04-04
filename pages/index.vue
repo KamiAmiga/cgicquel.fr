@@ -1,5 +1,5 @@
 <template>
-  <div class="homepage">
+  <main role="main" class="homepage">
     <div class="homepage__bg-triangle homepage__bg-triangle--1"></div>
     <div class="homepage__bg-triangle homepage__bg-triangle--2"></div>
     <div class="homepage__bg-triangle homepage__bg-triangle--3"></div>
@@ -93,7 +93,7 @@
         </div>
       </div>
     </div>
-  </div>
+  </main>
 </template>
 
 <script>
@@ -834,7 +834,7 @@ $bg-triangles:
 
               &::before,
               &::after {
-                border-top-color: map-get($theme-color-primary, reverse);
+                border-top-color: $border-color;
               }
             }
             @else {
@@ -850,6 +850,12 @@ $bg-triangles:
 
         &--2 {
           border-top: none;
+
+          &::before,
+          &::after {
+            border-top-width: 2px;
+            border-top-style: dashed;
+          }
         }
 
         &--3 {
