@@ -28,6 +28,7 @@ $icon-wrapper-sizes-suffix: s, m, l;
 
     &--square {
       position: relative;
+      z-index: map-get($z-index, base-increase);
 
       &::before {
         content: "";
@@ -37,7 +38,7 @@ $icon-wrapper-sizes-suffix: s, m, l;
         border-style: solid;
         top: 50%;
         left: 50%;
-        z-index: -1;
+        z-index: map-get($z-index, base-decrease);
         transform-origin: center;
         transform: translate(-50%, -50%)
           rotate(45deg);

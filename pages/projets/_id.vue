@@ -4,36 +4,16 @@
       color="accent" />
 
     <div class="content">
-      <dl class="project-stats">
-        <dt class="project-stats__property font-sans--md-capitalized">Année</dt>
-        <dd class="project-stats__value font-mono font-mono--small">{{ work.year }}</dd>
-        <dt class="project-stats__property font-sans--md-capitalized">Outils</dt>
-        <dd class="project-stats__value font-mono font-mono--small">
-          <ul class="project-stats__tools-list"
-            v-if="work.tools.length > 1">
-            <li class="project-stats__tool project-stats__tool--list-item"
-              v-for="tool in work.tools"
-              :key="tool.id">
-              <svg-icon class="project-stats__tool__icon icon--m"
-                :class="'project-stats__tool__icon--' + category"
-                :name="tool.icon" />
-              {{ tool.name }}
-            </li>
-          </ul>
-          <div class="project-stats__tool" v-else>
-            <svg-icon class="project-stats__tool__icon icon--m"
-            :class="'project-stats__tool__icon--' + category"
-              :name="work.tools[0].icon" />
-            {{ work.tools[0].name }}
-          </div>
-        </dd>
-      </dl>
+      <div class="section section--full">
+        <ProjectStats :year="work.year"
+          :tools="work.tools" />
 
-      <div class="project__description text-container">
-        <p v-for="paragraph in work.description"
-          :key="paragraph.id"
-          v-html="paragraph">
-        </p>
+        <div class="project__description text-container">
+          <p v-for="paragraph in work.description"
+            :key="paragraph.id"
+            v-html="paragraph">
+          </p>
+        </div>
       </div>
 
       <div class="project__mainImages">
@@ -80,10 +60,12 @@
 
 <script>
 import Header from '@/components/Header'
+import ProjectStats from '@/components/project/ProjectStats'
 
 export default {
   components: {
-    Header
+    Header,
+    ProjectStats
   },
   data () {
     return {
