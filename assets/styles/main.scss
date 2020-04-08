@@ -243,6 +243,13 @@ p {
   &--half {
     flex-basis: 50%;
   }
+
+  &--flex {
+    @media screen and (min-width: $breakpoint-m) {
+      display: flex;
+      align-items: start;
+    }
+  }
 }
 
 .text-container {
