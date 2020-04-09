@@ -17,7 +17,18 @@ export const state = () => ({
         'Description text part 1',
         'Description text part 2'
       ],
-      imagesGroups: []
+      imagesGroups: [
+        {
+          baseImage: ''
+        },
+        {
+          baseImage: '',
+          zoomImages: []
+        },
+        {
+          baseImage: ''
+        }
+      ]
     },
     {
       id: 'test-2',
@@ -42,7 +53,14 @@ export const state = () => ({
         'Description text part 1',
         'Description text part 2'
       ],
-      imagesGroups: [],
+      imagesGroups: [
+        {
+          baseImage: ''
+        },
+        {
+          baseImage: ''
+        }
+      ],
       fonts: [],
       colors: [
         {

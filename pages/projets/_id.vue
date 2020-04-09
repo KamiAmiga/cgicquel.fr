@@ -4,7 +4,7 @@
       color="accent" />
 
     <div class="content">
-      <div class="section section--full section--flex">
+      <section class="section section--full section--flex">
         <ProjectStats :year="work.year"
           :tools="work.tools" />
 
@@ -17,7 +17,7 @@
 
           </div>
         </div>
-      </div>
+      </section>
 
       <div class="section section--full">
         <a href="#main-images"
@@ -25,26 +25,28 @@
           :aria-label="'Les images du projet' + work.title"></a>
       </div>
 
-      <div id="main-images" class="project__mainImages">
+      <section id="main-images" class="section section--full">
         <h2 class="sr-only">Le projet {{ work.title }} en images</h2>
-        <template v-for="imagesGroup in work.imagesGroups">
-          <figure :key="imagesGroup.id" v-if="Array.isArray(imagesGroup)">
-            <img :src="image"
+        <figure v-for="imagesGroup in work.imagesGroups"
+          :key="imagesGroup.id">
+          <div class="project__images-group__image project__images-group__image--base">
+            <img :src="imagesGroup.baseImage" alt="">
+          </div>
+          <div class="project__images-group__image project__images-group__image--zoom"
+            v-if="imagesGroup.zoomImages">
+            <img :src="zoomImage"
               alt=""
-              v-for="image in imagesGroup"
-              :key="image.id">
-          </figure>
-          <figure :key="imagesGroup.id" v-else>
-            <img :src="imagesGroup" alt="">
-          </figure>
-        </template>
-      </div>
+              v-for="zoomImage in imagesGroup.zoomImages"
+              :key="zoomImage.id">
+          </div>
+        </figure>
+      </section>
 
       <div v-if="work.type === 'design'">
-        <div class="project__fonts section section--half">
+        <section class="project__fonts section section--half">
           <h2 class="heading--second">Typographie</h2>
-        </div>
-        <div class="project__colors section section--half">
+        </section>
+        <section class="project__colors section section--half">
           <h2 class="heading--second">Couleurs</h2>
           <ul>
             <li v-for="color in work.colors"
@@ -52,16 +54,16 @@
               {{ color.name }}
             </li>
           </ul>
-        </div>
+        </section>
       </div>
 
       <template v-if="secondaryImages">
-        <div class="project__secondaryImages">
+        <section class="project__secondaryImages">
           <figure v-for="secondaryImage in work.secondaryImages"
             :key="secondaryImage.id">
             <img :src="secondaryImage" alt="">
           </figure>
-        </div>
+        </section>
       </template>
     </div>
   </main>
@@ -118,6 +120,18 @@ export default {
       border-bottom: .25rem solid map-get($theme-color-accent, base);
       margin-top: map-get($spacers, 2) * -1;
       transform: rotate(-45deg);
+    }
+  }
+
+  &__images-group {
+    margin-bottom: map-get($spacers, 4);
+
+    &__image {
+      display: block;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
     }
   }
 
