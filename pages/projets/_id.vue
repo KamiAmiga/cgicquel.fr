@@ -27,19 +27,7 @@
 
       <section id="main-images" class="section section--full">
         <h2 class="sr-only">Le projet {{ work.title }} en images</h2>
-        <figure v-for="imagesGroup in work.imagesGroups"
-          :key="imagesGroup.id">
-          <div class="project__images-group__image project__images-group__image--base">
-            <img :src="imagesGroup.baseImage" alt="">
-          </div>
-          <div class="project__images-group__image project__images-group__image--zoom"
-            v-if="imagesGroup.zoomImages">
-            <img :src="zoomImage"
-              alt=""
-              v-for="zoomImage in imagesGroup.zoomImages"
-              :key="zoomImage.id">
-          </div>
-        </figure>
+        <ProjectMainImages :imagesGroups="work.imagesGroups" />
       </section>
 
       <div v-if="work.type === 'design'">
@@ -72,11 +60,13 @@
 <script>
 import Header from '@/components/Header'
 import ProjectStats from '@/components/project/ProjectStats'
+import ProjectMainImages from '@/components/project/ProjectMainImages'
 
 export default {
   components: {
     Header,
-    ProjectStats
+    ProjectStats,
+    ProjectMainImages
   },
   data () {
     return {
@@ -120,18 +110,6 @@ export default {
       border-bottom: .25rem solid map-get($theme-color-accent, base);
       margin-top: map-get($spacers, 2) * -1;
       transform: rotate(-45deg);
-    }
-  }
-
-  &__images-group {
-    margin-bottom: map-get($spacers, 4);
-
-    &__image {
-      display: block;
-    }
-
-    &:last-child {
-      margin-bottom: 0;
     }
   }
 

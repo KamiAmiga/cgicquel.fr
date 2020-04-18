@@ -126,7 +126,7 @@ $tools-types:
   }
 
   @media screen and (min-width: $breakpoint-m) {
-    max-width: 20rem;
+    width: 20rem;
     flex-grow: 0;
     flex-shrink: 0;
     padding: map-get($spacers, 8) map-get($spacers, 7) map-get($spacers, 6) map-get($spacers, 7);
