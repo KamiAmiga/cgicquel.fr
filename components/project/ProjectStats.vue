@@ -43,15 +43,24 @@ export default {
 </script>
 
 <style lang="scss">
+//
+// Variables
+//
+
 $tools-types:
   "code" $theme-color-tertiary,
   "design" $theme-color-secondary;
+
+//
+// Styling
+//
 
 .project-stats {
   box-sizing: border-box;
   padding: 0;
   border-bottom: 1px solid map-get($theme-color-primary, lighter-2);
   margin: 0;
+  z-index: map-get($z-index, base-increase);
 
   &__property {
     margin-bottom: map-get($spacers, 3);
@@ -131,7 +140,7 @@ $tools-types:
     flex-shrink: 0;
     padding: map-get($spacers, 8) map-get($spacers, 7) map-get($spacers, 6) map-get($spacers, 7);
     border: none;
-    margin: -7.75rem 0 0 0;
+    margin: -12rem 0 0 0;
     background-color: map-get($theme-color-primary, reverse);
 
     &__property {

@@ -104,9 +104,6 @@
 // Variables
 //
 
-$triangle-ratio: .867;
-$triangle-base-angle: 30deg;
-
 $bg-lines:
   1 88% dashed 0 53% .08,
   2 67% solid 0 50% .16,

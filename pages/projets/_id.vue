@@ -1,7 +1,8 @@
 <template>
   <main class="project" role="main">
     <Header :title="work.title"
-      color="accent" />
+      :type="work.type"
+      :image="work.mainIlluDesktop" />
 
     <div class="content">
       <section class="section section--full section--flex">

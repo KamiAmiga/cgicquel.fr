@@ -2,7 +2,7 @@
   <main role="main">
     <Header title="A propos"
       small
-      color="accent" />
+      type="about" />
 
     <div class="content">
       <section class="section section--full">

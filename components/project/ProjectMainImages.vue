@@ -36,9 +36,17 @@ export default {
 </script>
 
 <style lang="scss">
+//
+// Variables
+//
+
 $focus-border: 1px solid map-get($theme-color-secondary, lighter);
 $focus-space: map-get($spacers, 3) + map-get($spacers, 1);
 $focus-space_m: map-get($spacers, 3) + map-get($spacers, 2);
+
+//
+// Styling
+//
 
 .project-main-images {
   &__group {
@@ -51,8 +59,8 @@ $focus-space_m: map-get($spacers, 3) + map-get($spacers, 2);
       max-width: 100%;
       box-shadow: map-get($spacers, 2) * -1
         map-get($spacers, 1)
-        map-get($spacers, 3)
-        fade-out(map-get($theme-color-secondary, lighter), map-get($fading-out, 2));
+        map-get($spacers, 2)
+        fade-out(map-get($theme-color-secondary, lighter), map-get($fading-out, 3));
     }
 
     &__zoom {
