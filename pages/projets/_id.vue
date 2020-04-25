@@ -55,6 +55,10 @@
         </section>
       </template>
     </div>
+
+    <ProjectNext :name="nextWork.title"
+        :link="nextWork.id"
+        :image="nextWork.mainIlluDesktop" />
   </main>
 </template>
 
@@ -62,12 +66,14 @@
 import Header from '@/components/Header'
 import ProjectStats from '@/components/project/ProjectStats'
 import ProjectMainImages from '@/components/project/ProjectMainImages'
+import ProjectNext from '@/components/project/ProjectNext'
 
 export default {
   components: {
     Header,
     ProjectStats,
-    ProjectMainImages
+    ProjectMainImages,
+    ProjectNext
   },
   data () {
     return {
@@ -77,6 +83,14 @@ export default {
   computed: {
     work () {
       return this.$store.state.works.list.find(work => work.id === this.id)
+    },
+    nextWork () {
+      const currentIndex = this.$store.state.works.list.findIndex(work => work.id === this.id)
+      if (currentIndex + 1 < this.$store.state.works.list.length) {
+        return this.$store.state.works.list[currentIndex + 1]
+      } else {
+        return this.$store.state.works.list[0]
+      }
     }
   }
 }
