@@ -11,7 +11,7 @@
       <div class="project-next__info">
         <div class="project-next__info__text">
           <span class="font-mono font-mono--small">Projet suivant</span>
-          <span class="font-sans--capitalized">{{ name }}</span>
+          <span class="project-next__info__text__name">{{ name }}</span>
         </div>
         <div class="project-next__info__next-icon"></div>
       </div>
@@ -97,6 +97,17 @@ export default {
       display: flex;
       flex-direction: column;
       align-items: flex-end;
+
+      &__name {
+        // turn into mixin
+        font-size: $font-size-base;
+        color: map-get($theme-color-accent, lighter);
+        font-weight: $font-weight-light;
+        line-height: $line-height-base;
+        letter-spacing: $letter-spacing-large-3;
+        text-transform: uppercase;
+        // turn into mixin
+      }
     }
 
     &__next-icon {
@@ -150,6 +161,14 @@ export default {
     &__info {
       padding-top: map-get($spacers, 3);
       padding-bottom: map-get($spacers, 3);
+
+      &__text__name {
+        // turn into mixin
+        font-size: $font-size-base * $font-size-scale-ratio;
+        line-height: $line-height-small;
+        letter-spacing: $letter-spacing-large-2;
+        // turn into mixin
+      }
 
       &__next-icon {
         margin-left: map-get($spacers, 4);

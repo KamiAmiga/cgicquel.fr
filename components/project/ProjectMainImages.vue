@@ -6,7 +6,8 @@
       <div>
         <img :src="imagesGroup.baseImage"
           alt=""
-          class="project-main-images__group__image-base">
+          class="project-main-images__group__image-base"
+          :class="'project-main-images__group__image-base--' + type">
       </div>
       <div class="project-main-images__group__zoom"
         v-if="imagesGroup.zoomImages">
@@ -30,7 +31,8 @@
 <script>
 export default {
   props: {
-    imagesGroups: Array
+    imagesGroups: Array,
+    type: String
   }
 }
 </script>
@@ -57,10 +59,20 @@ $focus-space_m: map-get($spacers, 3) + map-get($spacers, 2);
 
     &__image-base {
       max-width: 100%;
-      box-shadow: map-get($spacers, 2) * -1
-        map-get($spacers, 1)
-        map-get($spacers, 2)
-        fade-out(map-get($theme-color-secondary, lighter), map-get($fading-out, 3));
+
+      &--drawing {
+        box-shadow: map-get($spacers, 2) * -1
+          map-get($spacers, 1)
+          map-get($spacers, 2)
+          fade-out(map-get($theme-color-secondary, lighter), map-get($fading-out, 3));
+      }
+
+      &--design {
+        box-shadow: map-get($spacers, 2) * -1
+          map-get($spacers, 1)
+          map-get($spacers, 2)
+          fade-out(map-get($theme-color-accent, lighter), map-get($fading-out, 3));
+      }
     }
 
     &__zoom {

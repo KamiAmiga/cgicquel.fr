@@ -28,12 +28,14 @@
 
       <section id="main-images" class="section section--full">
         <h2 class="sr-only">Le projet {{ work.title }} en images</h2>
-        <ProjectMainImages :imagesGroups="work.imagesGroups" />
+        <ProjectMainImages :imagesGroups="work.imagesGroups"
+          :type="work.type" />
       </section>
 
-      <div v-if="work.type === 'design'">
+      <template v-if="work.type === 'design'">
         <section class="project__fonts section section--half">
           <h2 class="heading--second">Typographie</h2>
+          <ProjectTypography :fonts="work.fonts"/>
         </section>
         <section class="project__colors section section--half">
           <h2 class="heading--second">Couleurs</h2>
@@ -44,7 +46,7 @@
             </li>
           </ul>
         </section>
-      </div>
+      </template>
 
       <template v-if="secondaryImages">
         <section class="project__secondaryImages">
@@ -66,6 +68,7 @@
 import Header from '@/components/Header'
 import ProjectStats from '@/components/project/ProjectStats'
 import ProjectMainImages from '@/components/project/ProjectMainImages'
+import ProjectTypography from '@/components/project/ProjectTypography'
 import ProjectNext from '@/components/project/ProjectNext'
 
 export default {
@@ -73,6 +76,7 @@ export default {
     Header,
     ProjectStats,
     ProjectMainImages,
+    ProjectTypography,
     ProjectNext
   },
   data () {
