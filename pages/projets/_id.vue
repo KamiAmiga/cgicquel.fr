@@ -43,12 +43,10 @@
         </section>
       </template>
 
-      <template v-if="secondaryImages">
-        <section class="project__secondaryImages">
-          <figure v-for="secondaryImage in work.secondaryImages"
-            :key="secondaryImage.id">
-            <img :src="secondaryImage" alt="">
-          </figure>
+      <template v-if="work.secondaryImages">
+        <section class="section section--full">
+        <h2 class="sr-only">Plus d'images du projet {{ work.title }}</h2>
+          <ProjectSecondaryImages :images="work.secondaryImages"/>
         </section>
       </template>
     </div>
@@ -65,6 +63,7 @@ import ProjectStats from '@/components/project/ProjectStats'
 import ProjectMainImages from '@/components/project/ProjectMainImages'
 import ProjectTypography from '@/components/project/ProjectTypography'
 import ProjectColors from '@/components/project/ProjectColors'
+import ProjectSecondaryImages from '@/components/project/ProjectSecondaryImages'
 import ProjectNext from '@/components/project/ProjectNext'
 
 export default {
@@ -74,6 +73,7 @@ export default {
     ProjectMainImages,
     ProjectTypography,
     ProjectColors,
+    ProjectSecondaryImages,
     ProjectNext
   },
   data () {
