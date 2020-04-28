@@ -39,12 +39,7 @@
         </section>
         <section class="project__colors section section--half">
           <h2 class="heading--second">Couleurs</h2>
-          <ul>
-            <li v-for="color in work.colors"
-              :key="color.id">
-              {{ color.name }}
-            </li>
-          </ul>
+          <ProjectColors :colors="work.colors"/>
         </section>
       </template>
 
@@ -69,6 +64,7 @@ import Header from '@/components/Header'
 import ProjectStats from '@/components/project/ProjectStats'
 import ProjectMainImages from '@/components/project/ProjectMainImages'
 import ProjectTypography from '@/components/project/ProjectTypography'
+import ProjectColors from '@/components/project/ProjectColors'
 import ProjectNext from '@/components/project/ProjectNext'
 
 export default {
@@ -77,6 +73,7 @@ export default {
     ProjectStats,
     ProjectMainImages,
     ProjectTypography,
+    ProjectColors,
     ProjectNext
   },
   data () {

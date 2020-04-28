@@ -153,6 +153,8 @@ export default {
   }
 
   @media screen and (min-width: $breakpoint-m) {
+    margin-top: map-get($spacers, 7);
+
     &__background {
       max-height: 20rem;
       border-bottom: none;
