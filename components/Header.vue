@@ -12,8 +12,7 @@
         <div class="header__illustration__drawing-image-wrapper">
           <img :src="image"
             alt=""
-            class="header__illustration__drawing-image"
-            v-if="image">
+            class="header__illustration__drawing-image">
           <div class="header__illustration__drawing-image-filter"></div>
           <div class="header__illustration__drawing-image-focus
             header__illustration__drawing-image-focus--left"></div>
@@ -32,6 +31,40 @@
           header__illustration__drawing-line--right-2"></div>
         <div class="header__illustration__drawing-triangle
           header__illustration__drawing-triangle--2"></div>
+      </template>
+      <template v-else-if="type == 'design'">
+        <div class="header__illustration__design-section
+          header__illustration__design-section--top">
+          <div class="header__illustration__design-section__image-wrapper
+            header__illustration__design-section__image-wrapper--top">
+            <img :src="image"
+              alt=""
+              class="header__illustration__design-section__image">
+            <div class="header__illustration__design-section__image-triangle
+              header__illustration__design-section__image-triangle--1"></div>
+            <div class="header__illustration__design-section__image-triangle
+              header__illustration__design-section__image-triangle--2"></div>
+          </div>
+        </div>
+        <div class="header__illustration__design-section
+          header__illustration__design-section--bottom">
+          <div class="header__illustration__design-section__image-wrapper
+            header__illustration__design-section__image-wrapper--bottom">
+            <img :src="image"
+              alt=""
+              class="header__illustration__design-section__image">
+            <div class="header__illustration__design-section__image-triangle
+              header__illustration__design-section__image-triangle--3"></div>
+            <div class="header__illustration__design-section__image-triangle
+              header__illustration__design-section__image-triangle--4"></div>
+          </div>
+        </div>
+        <div class="header__illustration__design-line
+          header__illustration__design-line--1"></div>
+        <div class="header__illustration__design-line
+          header__illustration__design-line--2"></div>
+        <div class="header__illustration__design-line
+          header__illustration__design-line--3"></div>
       </template>
     </div>
     <div class="header__title"
@@ -57,7 +90,7 @@ export default {
 // Variables
 //
 
-$header-height: 26.25rem;
+$header-height: 30rem;
 $drawing-gradient: linear-gradient(
   -30deg,
   map-get($theme-color-primary, base),
@@ -67,6 +100,7 @@ $drawing-gradient: linear-gradient(
   66%,
   map-get($theme-color-primary, base),
 );
+$design-angle: 15deg;
 
 //
 // Styling
@@ -149,9 +183,9 @@ $drawing-gradient: linear-gradient(
 
       &-line {
         height: 0;
-        position: absolute;
         border-top-width: 2px;
         border-top-color: map-get($theme-color-primary, reverse);
+        position: absolute;
         transform: rotate($triangle-base-angle * -1);
 
         &--left-1 {
@@ -200,9 +234,115 @@ $drawing-gradient: linear-gradient(
         }
       }
     }
+
+    &__design {
+      &-section {
+        display: flex;
+        width: 100%;
+        max-width: 57.5rem;
+        position: absolute;
+        left: 50%;
+        overflow: hidden;
+        transform: translateX(-50%) skewY($design-angle * -1);
+
+        &--top {
+          border-bottom: .25rem solid map-get($theme-color-accent, darker);
+          top: 0;
+          bottom: 45%;
+          align-items: flex-end;
+          transform-origin: bottom left;
+        }
+
+        &--bottom {
+          top: 55%;
+          align-items: flex-start;
+          transform-origin: top left;
+        }
+
+        &__image {
+          width: 100%;
+
+          &-wrapper {
+            flex-grow: 0;
+            flex-shrink: 0;
+            margin: 0 auto;
+            position: relative;
+            line-height: 0;
+
+            &--top {
+              width: 75%;
+              transform: translateY(50%) skewY($design-angle);
+            }
+
+            &--bottom {
+              width: 70%;
+              transform: translate(2%, -48%) skewY($design-angle);
+
+              &::before,
+              &::after {
+                content: "";
+                display: block;
+                width: 100%;
+                height: 100%;
+                position: absolute;
+                top: 0;
+                left: 0;
+              }
+
+              &::before {
+                background: fade-out(map-get($theme-color-primary, base), map-get($fading-out, 5));
+              }
+
+              &::after {
+                background: linear-gradient(
+                  -15deg,
+                  transparent 32%,
+                  44%,
+                  map-get($theme-color-primary, base) 52%
+                );
+              }
+            }
+          }
+        }
+      }
+
+      &-line {
+        height: 0;
+        border-top-width: 2px;
+        border-top-color: map-get($theme-color-accent, lighter);
+        position: absolute;
+        z-index: map-get($z-index, base-decrease);
+        transform-origin: bottom left;
+        transform: rotate($design-angle * -1);
+
+        &--1 {
+          width: 75%;
+          border-top-style: solid;
+          left: 0;
+          bottom: 25rem;
+        }
+
+        &--2 {
+          width: 88%;
+          border-top-style: dashed;
+          right: 0;
+          bottom: 24rem;
+          opacity: map-get($opacities, 2);
+        }
+
+        &--3 {
+          width: 80%;
+          border-top-style: solid;
+          left: 15%;
+          bottom: 8.5rem;
+          opacity: map-get($opacities, 3);
+        }
+      }
+    }
   }
 
-  &--about {
+  &--about,
+  &--design {
     background: linear-gradient(
       to bottom,
       fade-out(map-get($theme-color-accent, base),
@@ -215,6 +355,29 @@ $drawing-gradient: linear-gradient(
 
   &--drawing {
     background: $drawing-gradient;
+  }
+
+  @media screen and (min-width: $breakpoint-s) {
+    &__illustration {
+      &__design {
+        &-section {
+          &--top {
+            bottom: 30%;
+          }
+
+          &--bottom {
+            top: 70%;
+          }
+        }
+
+        &-line {
+          &--3 {
+            left: 40%;
+            bottom: 0;
+          }
+        }
+      }
+    }
   }
 
   @media screen and (min-width: $breakpoint-m) {
@@ -294,6 +457,138 @@ $drawing-gradient: linear-gradient(
             top: map-get($spacers, 7);
             clip-path: polygon(100% 0, 0 0, 50% 100%);
             background-color: map-get($theme-color-secondary, lighter);
+          }
+        }
+      }
+
+      &__design {
+        &-section {
+          &--top {
+            bottom: 16%;
+          }
+
+          &--bottom {
+            top: 84%;
+          }
+
+          &__image {
+            &-wrapper {
+              &--top {
+                width: 70%;
+                transform: translateY(40%) skewY($design-angle);
+              }
+
+              &--bottom {
+                width: 66%;
+                transform: translate(2%, -58%) skewY($design-angle);
+
+                &::after {
+                  background: linear-gradient(
+                    -15deg,
+                    transparent 25%,
+                    38%,
+                    map-get($theme-color-primary, base) 44%
+                  );
+                }
+              }
+            }
+
+            &-triangle {
+              position: absolute;
+
+              &--1 {
+                width: map-get($spacers, 9);
+                height: map-get($spacers, 9) * $triangle-ratio;
+                top: map-get($spacers, 6) * -1;
+                left: 0;
+                clip-path: polygon(100% 0, 0 0, 50% 100%);
+                background-color: map-get($theme-color-accent, darker);
+                transform: translateX(-50%);
+              }
+
+              &--2 {
+                width: 8.5rem;
+                height: 8.5rem * $triangle-ratio;
+                border-top: solid 1px map-get($theme-color-fourth, lighter);
+                top: map-get($spacers, 3) * -1;
+                left: -5.5rem;
+                z-index: map-get($z-index, base-decrease);
+                opacity: map-get($opacities, 3);
+
+                &::before,
+                &::after {
+                  content: "";
+                  width: 100%;
+                  border-top: solid 1px map-get($theme-color-fourth, lighter);
+                  position: absolute;
+                  bottom: 0;
+                }
+
+                &::before {
+                  right: 50%;
+                  transform-origin: bottom right;
+                  transform: rotate(60deg);
+                }
+
+                &::after {
+                  left: 50%;
+                  transform-origin: top left;
+                  transform: rotate(-60deg);
+                }
+              }
+
+              &--3 {
+                width: map-get($spacers, 9);
+                height: map-get($spacers, 9) * $triangle-ratio;
+                right: 0;
+                bottom: map-get($spacers, 7);
+                clip-path: polygon(100% 100%, 50% 0, 0 100%);
+                background-color: map-get($theme-color-accent, darker);
+                transform: translateX(50%);
+              }
+
+              &--4 {
+                width: 14.5rem;
+                height: 14.5rem * $triangle-ratio;
+                border-bottom: solid 1px map-get($theme-color-tertiary, lighter);
+                right: 0;
+                bottom: -9.5rem;
+                z-index: map-get($z-index, base-decrease);
+                opacity: map-get($opacities, 2);
+                transform: translateX(50%);
+
+                &::before,
+                &::after {
+                  content: "";
+                  width: 100%;
+                  border-top: solid 1px map-get($theme-color-tertiary, lighter);
+                  position: absolute;
+                  top: 0;
+                }
+
+                &::before {
+                  right: 50%;
+                  transform-origin: bottom right;
+                  transform: rotate(-60deg);
+                }
+
+                &::after {
+                  left: 50%;
+                  transform-origin: top left;
+                  transform: rotate(60deg);
+                }
+              }
+            }
+          }
+        }
+
+        &-line {
+          &--1 {
+            bottom: 50%;
+          }
+
+          &--2 {
+            bottom: 48%;
           }
         }
       }
