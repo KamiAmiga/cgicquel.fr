@@ -5,15 +5,15 @@
     </h1>
 
     <hooper>
-      <slide v-for="work in works"
-        :key="work.id">
+      <slide v-for="project in projects"
+        :key="project.id">
         <div class="projects__item"
-          :class="'projects__item--' + work.type">
-          <nuxt-link :to="'/projets/' + work.id"
+          :class="'projects__item--' + project.type">
+          <nuxt-link :to="'/projets/' + project.id"
             class="projects__item__link">
             <div class="projects__item__link__marker"></div>
             <h2 class="heading--main projects__item__link__title">
-              {{ work.title }}
+              {{ project.title }}
             </h2>
             <div class="projects__item__link__visual">
               <div class="projects__item__link__visual__line
@@ -23,7 +23,7 @@
               <div class="projects__item__link__visual__line
                 projects__item__link__visual__line--3"></div>
               <div class="projects__item__link__visual__image-wrapper">
-                <img :src="work.mainIlluDesktop" alt=""
+                <img :src="project.mainIlluDesktop" alt=""
                   class="projects__item__link__visual__image">
               </div>
             </div>
@@ -50,8 +50,8 @@ export default {
     HooperNavigation
   },
   computed: {
-    works () {
-      return this.$store.state.works.list
+    projects () {
+      return this.$store.state.projects.list
     }
   }
 }

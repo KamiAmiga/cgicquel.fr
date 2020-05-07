@@ -1,17 +1,17 @@
 <template>
   <main class="project" role="main">
-    <Header :title="work.title"
-      :type="work.type"
-      :image="work.mainIlluDesktop" />
+    <Header :title="project.title"
+      :type="project.type"
+      :image="project.mainIlluDesktop" />
 
     <div class="content">
       <section class="section section--full section--flex">
-        <ProjectStats :year="work.year"
-          :tools="work.tools" />
+        <ProjectStats :year="project.year"
+          :tools="project.tools" />
 
         <div class="project__description">
           <div class="text-container">
-            <p v-for="paragraph in work.description"
+            <p v-for="paragraph in project.description"
               :key="paragraph.id"
               v-html="paragraph">
             </p>
@@ -23,37 +23,37 @@
       <div class="section section--full">
         <a href="#main-images"
           class="project__scrollto"
-          :aria-label="'Les images du projet' + work.title"></a>
+          :aria-label="'Les images du projet' + project.title"></a>
       </div>
 
       <section id="main-images" class="section section--full">
-        <h2 class="sr-only">Le projet {{ work.title }} en images</h2>
-        <ProjectMainImages :imagesGroups="work.imagesGroups"
-          :type="work.type" />
+        <h2 class="sr-only">Le projet {{ project.title }} en images</h2>
+        <ProjectMainImages :imagesGroups="project.imagesGroups"
+          :type="project.type" />
       </section>
 
-      <template v-if="work.type === 'design'">
+      <template v-if="project.type === 'design'">
         <section class="project__fonts section section--half">
           <h2 class="heading--second">Typographie</h2>
-          <ProjectTypography :fonts="work.fonts"/>
+          <ProjectTypography :fonts="project.fonts"/>
         </section>
         <section class="project__colors section section--half">
           <h2 class="heading--second">Couleurs</h2>
-          <ProjectColors :colors="work.colors"/>
+          <ProjectColors :colors="project.colors"/>
         </section>
       </template>
 
-      <template v-if="work.secondaryImages">
+      <template v-if="project.secondaryImages">
         <section class="section section--full">
-        <h2 class="sr-only">Plus d'images du projet {{ work.title }}</h2>
-          <ProjectSecondaryImages :images="work.secondaryImages"/>
+        <h2 class="sr-only">Plus d'images du projet {{ project.title }}</h2>
+          <ProjectSecondaryImages :images="project.secondaryImages"/>
         </section>
       </template>
     </div>
 
-    <ProjectNext :name="nextWork.title"
-        :link="nextWork.id"
-        :image="nextWork.mainIlluDesktop" />
+    <ProjectNext :name="nextProject.title"
+        :link="nextProject.id"
+        :image="nextProject.mainIlluDesktop" />
   </main>
 </template>
 
@@ -82,15 +82,15 @@ export default {
     }
   },
   computed: {
-    work () {
-      return this.$store.state.works.list.find(work => work.id === this.id)
+    project () {
+      return this.$store.state.projects.list.find(project => project.id === this.id)
     },
-    nextWork () {
-      const currentIndex = this.$store.state.works.list.findIndex(work => work.id === this.id)
-      if (currentIndex + 1 < this.$store.state.works.list.length) {
-        return this.$store.state.works.list[currentIndex + 1]
+    nextProject () {
+      const currentIndex = this.$store.state.projects.list.findIndex(project => project.id === this.id)
+      if (currentIndex + 1 < this.$store.state.projects.list.length) {
+        return this.$store.state.projects.list[currentIndex + 1]
       } else {
-        return this.$store.state.works.list[0]
+        return this.$store.state.projects.list[0]
       }
     }
   }
