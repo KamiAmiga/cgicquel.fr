@@ -4,10 +4,10 @@
       small
       type="about" />
 
-    <div class="content">
+    <div class="content about-content">
       <section class="section section--full">
-        <div class="intro-wrapper">
-          <div class="text-container intro">
+        <div class="about-content__intro-wrapper">
+          <div class="text-container about-content__intro">
             <p>Bonjour, je suis <strong class="font-sans--capitalized">Camille, UI Designer et Intégratrice</strong>, travaillant dans le Nord de la France pour OVH. Mon cursus et mes expériences professionnelles m'ont permis de naviguer entre les domaines du <strong class="font-sans--capitalized">design</strong> et du <strong class="font-sans--capitalized">code</strong>.</p>
             <p><strong class="font-sans--capitalized">J'aime créer</strong> et n'hésite pas à découvrir de nouveaux champs d'expression, qu'ils soient artistiques ou informatiques.</p>
           </div>
@@ -279,54 +279,58 @@ export default {
 </script>
 
 <style lang="scss">
-.intro {
+.about-content {
+  padding-bottom: map-get($spacers, 10);
+
   @media screen and (min-width: $breakpoint-m) {
-    padding-top: map-get($spacers, 6);
-    padding-left: map-get($spacers, 6);
-    position: relative;
-
-    &::before {
-      content: "";
-      display: block;
-      position: absolute;
-      width: 10rem;
-      height: 10rem;
-      top: 0;
-      left: 0;
-      z-index: -1;;
-      background: linear-gradient(
-        to bottom right,
-        fade-out(map-get($theme-color-accent, darker), .68),
-        16.5%,
-        fade-out(map-get($theme-color-accent, base), 1) 50%
-      );
-    }
-
-    &-wrapper {
-      display: inline-block;
-      padding: map-get($spacers, 3);
+    &__intro {
+      padding-top: map-get($spacers, 6);
+      padding-left: map-get($spacers, 6);
       position: relative;
 
-      &::before,
-      &::after {
+      &::before {
         content: "";
         display: block;
-        width: map-get($spacers, 7);
-        height: map-get($spacers, 7);
-        border-top: 1px solid map-get($theme-color-accent, base);
-        border-left: 1px solid map-get($theme-color-accent, base);
         position: absolute;
-      }
-
-      &::before {
+        width: 10rem;
+        height: 10rem;
         top: 0;
         left: 0;
+        z-index: -1;;
+        background: linear-gradient(
+          to bottom right,
+          fade-out(map-get($theme-color-accent, darker), .68),
+          16.5%,
+          fade-out(map-get($theme-color-accent, base), 1) 50%
+        );
       }
 
-      &::after {
-        right: 0;
-        bottom: 0;
-        transform: rotate(180deg);
+      &-wrapper {
+        display: inline-block;
+        padding: map-get($spacers, 3);
+        position: relative;
+
+        &::before,
+        &::after {
+          content: "";
+          display: block;
+          width: map-get($spacers, 7);
+          height: map-get($spacers, 7);
+          border-top: 1px solid map-get($theme-color-accent, base);
+          border-left: 1px solid map-get($theme-color-accent, base);
+          position: absolute;
+        }
+
+        &::before {
+          top: 0;
+          left: 0;
+        }
+
+        &::after {
+          right: 0;
+          bottom: 0;
+          transform: rotate(180deg);
+        }
       }
     }
   }

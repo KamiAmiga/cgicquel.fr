@@ -41,7 +41,7 @@ export default {
 <style lang="scss">
 .project-next {
   display: block;
-  margin-bottom: map-get($spacers, 10);
+  margin-bottom: map-get($spacers, 10) + map-get($spacers, 7);
 
   &__background {
     height: 37.5vw;
