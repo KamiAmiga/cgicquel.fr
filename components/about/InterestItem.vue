@@ -1,17 +1,25 @@
 <template>
   <li class="interests-item">
     <div class="interests-item__icon-wrapper icon-wrapper icon-wrapper--circle">
-      <svg-icon class="interests-item__icon" :name="icon" />
+      <svg-icon :name="icon" class="interests-item__icon" />
     </div>
-    <div class="interests-item__name font-mono font-mono--small">{{ name }}</div>
+    <div class="interests-item__name font-mono font-mono--small">
+      {{ name }}
+    </div>
   </li>
 </template>
 
 <script>
 export default {
   props: {
-    name: String,
-    icon: String
+    name: {
+      type: String,
+      required: true
+    },
+    icon: {
+      type: String,
+      required: true
+    }
   }
 }
 </script>

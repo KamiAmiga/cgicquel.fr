@@ -1,31 +1,37 @@
 <template>
   <dl class="project-stats">
-    <dt class="project-stats__property font-sans--md-capitalized">Année</dt>
-    <dd class="project-stats__value font-mono font-mono--small">{{ year }}</dd>
-    <dt class="project-stats__property font-sans--md-capitalized">Outils</dt>
+    <dt class="project-stats__property font-sans--md-capitalized">
+      Année
+    </dt>
     <dd class="project-stats__value font-mono font-mono--small">
-      <ul class="project-stats__tools-list"
-        v-if="tools.length > 1">
-        <li class="project-stats__tool project-stats__tool--list-item"
-          v-for="tool in tools"
-          :key="tool.id">
+      {{ year }}
+    </dd>
+    <dt class="project-stats__property font-sans--md-capitalized">
+      Outils
+    </dt>
+    <dd class="project-stats__value font-mono font-mono--small">
+      <ul v-if="tools.length > 1"
+        class="project-stats__tools-list">
+        <li v-for="tool in tools"
+          :key="tool.id"
+          class="project-stats__tool project-stats__tool--list-item">
           <div class="project-stats__tool__icon-wrapper
             icon-wrapper
             icon-wrapper--square
             icon-wrapper--m"
             :class="'project-stats__tool__icon-wrapper--' + tool.category">
-            <svg-icon class="project-stats__tool__icon icon--m" :name="tool.icon" />
+            <svg-icon :name="tool.icon" class="project-stats__tool__icon icon--m" />
           </div>
           {{ tool.name }}
         </li>
       </ul>
-      <div class="project-stats__tool" v-else>
+      <div v-else class="project-stats__tool">
         <div class="project-stats__tool__icon-wrapper
           icon-wrapper
           icon-wrapper--square
           icon-wrapper--m"
           :class="'project-stats__tool__icon-wrapper--' + tools[0].category">
-          <svg-icon class="project-stats__tool__icon icon--m" :name="tools[0].icon" />
+          <svg-icon :name="tools[0].icon" class="project-stats__tool__icon icon--m" />
         </div>
         {{ tools[0].name }}
       </div>
@@ -36,8 +42,14 @@
 <script>
 export default {
   props: {
-    year: Number,
-    tools: Array
+    year: {
+      type: Number,
+      required: true
+    },
+    tools: {
+      type: Array,
+      required: true
+    }
   }
 }
 </script>

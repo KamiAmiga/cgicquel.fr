@@ -13,7 +13,10 @@
 <script>
 export default {
   props: {
-    images: Array
+    images: {
+      type: Array,
+      required: true
+    }
   }
 }
 </script>

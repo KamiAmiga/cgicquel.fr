@@ -4,9 +4,9 @@
       'menu--opened' : menuOpened,
       'menu--homepage' : homepage
     }">
-    <div class="menu__overlay"/>
+    <div class="menu__overlay" />
     <div class="menu__content">
-      <div class="menu__content__title" v-if="!homepage">
+      <div v-if="!homepage" class="menu__content__title">
         <span class="font-mono font-mono--small">UI Design & Intégration</span>
         <span class="menu__content__title__name font-sans--capitalized">Camille Gicquel</span>
       </div>
@@ -18,13 +18,13 @@
             menu__content__opener__button__decoration--left" />
           <span class="menu__content__opener__button__decoration
             menu__content__opener__button__decoration--right" />
-            <span class="menu__content__opener__button__icon" />
-          <span class="menu__content__opener__button__label font-mono font-mono--small"
-            v-if="!menuOpened">
+          <span class="menu__content__opener__button__icon" />
+          <span v-if="!menuOpened"
+            class="menu__content__opener__button__label font-mono font-mono--small">
             Menu
           </span>
         </span>
-        <span class="sr-only" v-if="menuOpened">Fermer le menu</span>
+        <span v-if="menuOpened" class="sr-only">Fermer le menu</span>
       </button>
 
       <ul class="menu__content__list">

@@ -8,29 +8,29 @@
     <div class="header__illustration">
       <template v-if="type == 'drawing'">
         <div class="header__illustration__drawing-triangle
-          header__illustration__drawing-triangle--1"></div>
+          header__illustration__drawing-triangle--1" />
         <div class="header__illustration__drawing-image-wrapper">
           <img :src="image"
             alt=""
             class="header__illustration__drawing-image">
-          <div class="header__illustration__drawing-image-filter"></div>
+          <div class="header__illustration__drawing-image-filter" />
           <div class="header__illustration__drawing-image-focus
-            header__illustration__drawing-image-focus--left"></div>
+            header__illustration__drawing-image-focus--left" />
           <div class="header__illustration__drawing-image-focus
-            header__illustration__drawing-image-focus--right"></div>
+            header__illustration__drawing-image-focus--right" />
         </div>
         <div class="header__illustration__drawing-line
-          header__illustration__drawing-line--left-1"></div>
+          header__illustration__drawing-line--left-1" />
         <div class="header__illustration__drawing-line
-          header__illustration__drawing-line--left-2"></div>
+          header__illustration__drawing-line--left-2" />
         <div class="header__illustration__drawing-line
-          header__illustration__drawing-line--left-3"></div>
+          header__illustration__drawing-line--left-3" />
         <div class="header__illustration__drawing-line
-          header__illustration__drawing-line--right-1"></div>
+          header__illustration__drawing-line--right-1" />
         <div class="header__illustration__drawing-line
-          header__illustration__drawing-line--right-2"></div>
+          header__illustration__drawing-line--right-2" />
         <div class="header__illustration__drawing-triangle
-          header__illustration__drawing-triangle--2"></div>
+          header__illustration__drawing-triangle--2" />
       </template>
       <template v-else-if="type == 'design'">
         <div class="header__illustration__design-section
@@ -41,9 +41,9 @@
               alt=""
               class="header__illustration__design-section__image">
             <div class="header__illustration__design-section__image-triangle
-              header__illustration__design-section__image-triangle--1"></div>
+              header__illustration__design-section__image-triangle--1" />
             <div class="header__illustration__design-section__image-triangle
-              header__illustration__design-section__image-triangle--2"></div>
+              header__illustration__design-section__image-triangle--2" />
           </div>
         </div>
         <div class="header__illustration__design-section
@@ -54,22 +54,24 @@
               alt=""
               class="header__illustration__design-section__image">
             <div class="header__illustration__design-section__image-triangle
-              header__illustration__design-section__image-triangle--3"></div>
+              header__illustration__design-section__image-triangle--3" />
             <div class="header__illustration__design-section__image-triangle
-              header__illustration__design-section__image-triangle--4"></div>
+              header__illustration__design-section__image-triangle--4" />
           </div>
         </div>
         <div class="header__illustration__design-line
-          header__illustration__design-line--1"></div>
+          header__illustration__design-line--1" />
         <div class="header__illustration__design-line
-          header__illustration__design-line--2"></div>
+          header__illustration__design-line--2" />
         <div class="header__illustration__design-line
-          header__illustration__design-line--3"></div>
+          header__illustration__design-line--3" />
       </template>
     </div>
     <div class="header__title"
       :class="{ 'header__title--translate' : type != 'about' }">
-      <h1 class="heading--main">{{ title }}</h1>
+      <h1 class="heading--main">
+        {{ title }}
+      </h1>
     </div>
   </header>
 </template>
@@ -77,9 +79,15 @@
 <script>
 export default {
   props: {
-    title: String,
+    title: {
+      type: String,
+      required: true
+    },
     small: Boolean,
-    type: String,
+    type: {
+      type: String,
+      required: true
+    },
     image: Function
   }
 }

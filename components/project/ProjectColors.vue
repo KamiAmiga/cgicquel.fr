@@ -1,10 +1,10 @@
 <template>
   <ul class="project-color">
-    <li class="project-color__item"
-      v-for="color in colors"
-      :key="color.id">
+    <li v-for="color in colors"
+      :key="color.id"
+      class="project-color__item">
       <span class="project-color__item__swatch"
-        :style="{ '--swatch-color': color.code }"></span>
+        :style="{ '--swatch-color': color.code }" />
       <span class="project-color__item__name">{{ color.name }}</span>
     </li>
   </ul>
@@ -13,7 +13,10 @@
 <script>
 export default {
   props: {
-    colors: Array
+    colors: {
+      type: Array,
+      required: true
+    }
   }
 }
 </script>

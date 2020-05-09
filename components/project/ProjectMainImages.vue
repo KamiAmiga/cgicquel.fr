@@ -1,27 +1,27 @@
 <template>
   <div class="project-main-images">
-    <figure class="project-main-images__group"
-      v-for="imagesGroup in imagesGroups"
-      :key="imagesGroup.id">
+    <figure v-for="imagesGroup in imagesGroups"
+      :key="imagesGroup.id"
+      class="project-main-images__group">
       <div>
         <img :src="imagesGroup.baseImage"
           alt=""
           class="project-main-images__group__image-base"
           :class="'project-main-images__group__image-base--' + type">
       </div>
-      <div class="project-main-images__group__zoom"
-        v-if="imagesGroup.zoomImages">
-        <div class="project-main-images__group__zoom__image-wrapper"
-          v-for="zoomImage in imagesGroup.zoomImages"
-          :key="zoomImage.id">
+      <div v-if="imagesGroup.zoomImages"
+        class="project-main-images__group__zoom">
+        <div v-for="zoomImage in imagesGroup.zoomImages"
+          :key="zoomImage.id"
+          class="project-main-images__group__zoom__image-wrapper">
           <img :src="zoomImage"
             alt=""
             class="project-main-images__group__zoom__image">
-          <div class="project-main-images__group__zoom__image-frame"></div>
+          <div class="project-main-images__group__zoom__image-frame" />
           <div class="project-main-images__group__zoom__image-focus
-            project-main-images__group__zoom__image-focus--left"></div>
+            project-main-images__group__zoom__image-focus--left" />
           <div class="project-main-images__group__zoom__image-focus
-            project-main-images__group__zoom__image-focus--right"></div>
+            project-main-images__group__zoom__image-focus--right" />
         </div>
       </div>
     </figure>
@@ -31,8 +31,14 @@
 <script>
 export default {
   props: {
-    imagesGroups: Array,
-    type: String
+    imagesGroups: {
+      type: Array,
+      required: true
+    },
+    type: {
+      type: String,
+      required: true
+    }
   }
 }
 </script>

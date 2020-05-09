@@ -13,9 +13,7 @@
           <div class="text-container">
             <p v-for="paragraph in project.description"
               :key="paragraph.id"
-              v-html="paragraph">
-            </p>
-
+              v-html="paragraph" />
           </div>
         </div>
       </section>
@@ -23,37 +21,45 @@
       <div class="section section--full">
         <a href="#main-images"
           class="project__scrollto"
-          :aria-label="'Les images du projet' + project.title"></a>
+          :aria-label="'Les images du projet' + project.title" />
       </div>
 
       <section id="main-images" class="section section--full">
-        <h2 class="sr-only">Le projet {{ project.title }} en images</h2>
+        <h2 class="sr-only">
+          Le projet {{ project.title }} en images
+        </h2>
         <ProjectMainImages :imagesGroups="project.imagesGroups"
           :type="project.type" />
       </section>
 
       <template v-if="project.type === 'design'">
         <section class="project__fonts section section--half">
-          <h2 class="heading--second">Typographie</h2>
-          <ProjectTypography :fonts="project.fonts"/>
+          <h2 class="heading--second">
+            Typographie
+          </h2>
+          <ProjectTypography :fonts="project.fonts" />
         </section>
         <section class="project__colors section section--half">
-          <h2 class="heading--second">Couleurs</h2>
-          <ProjectColors :colors="project.colors"/>
+          <h2 class="heading--second">
+            Couleurs
+          </h2>
+          <ProjectColors :colors="project.colors" />
         </section>
       </template>
 
       <template v-if="project.secondaryImages">
         <section class="section section--full">
-        <h2 class="sr-only">Plus d'images du projet {{ project.title }}</h2>
-          <ProjectSecondaryImages :images="project.secondaryImages"/>
+          <h2 class="sr-only">
+            Plus d'images du projet {{ project.title }}
+          </h2>
+          <ProjectSecondaryImages :images="project.secondaryImages" />
         </section>
       </template>
     </div>
 
     <ProjectNext :name="nextProject.title"
-        :link="nextProject.id"
-        :image="nextProject.mainIlluDesktop" />
+      :link="nextProject.id"
+      :image="nextProject.mainIlluDesktop" />
   </main>
 </template>
 

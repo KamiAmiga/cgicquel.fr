@@ -1,8 +1,8 @@
 <template>
   <li class="contact-item">
-    <a class="contact-item__link" :href="url">
+    <a :href="url" class="contact-item__link">
       <div class="contact-item__link__icon-wrapper icon-wrapper icon-wrapper--square">
-        <svg-icon class="contact-item__link__icon" :name="icon" />
+        <svg-icon :name="icon" class="contact-item__link__icon" />
       </div>
       <span class="contact-item__link__name">{{ name }}</span>
     </a>
@@ -12,9 +12,18 @@
 <script>
 export default {
   props: {
-    url: String,
-    name: String,
-    icon: String
+    url: {
+      type: String,
+      required: true
+    },
+    name: {
+      type: String,
+      required: true
+    },
+    icon: {
+      type: String,
+      required: true
+    }
   }
 }
 </script>

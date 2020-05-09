@@ -1,7 +1,7 @@
 <template>
   <li class="skill-item">
     <div class="skill-item__icon-wrapper">
-      <svg-icon class="icon--xl" :name="icon" />
+      <svg-icon :name="icon" class="icon--xl" />
     </div>
     <span class="skill-item__name">{{ name }}</span>
     <template v-if="level > 0">
@@ -20,9 +20,18 @@
 <script>
 export default {
   props: {
-    name: String,
-    icon: String,
-    level: Number
+    name: {
+      type: String,
+      required: true
+    },
+    icon: {
+      type: String,
+      required: true
+    },
+    level: {
+      type: Number,
+      default: 0
+    }
   }
 }
 </script>

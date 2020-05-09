@@ -1,13 +1,13 @@
 <template>
   <main role="main" class="homepage">
-    <div class="homepage__bg-triangle homepage__bg-triangle--1"></div>
-    <div class="homepage__bg-triangle homepage__bg-triangle--2"></div>
-    <div class="homepage__bg-triangle homepage__bg-triangle--3"></div>
-    <div class="homepage__bg-triangle homepage__bg-triangle--4"></div>
-    <div class="homepage__bg-triangle homepage__bg-triangle--5"></div>
-    <div class="homepage__bg-line homepage__bg-line--1"></div>
-    <div class="homepage__bg-line homepage__bg-line--2"></div>
-    <div class="homepage__bg-line homepage__bg-line--3"></div>
+    <div class="homepage__bg-triangle homepage__bg-triangle--1" />
+    <div class="homepage__bg-triangle homepage__bg-triangle--2" />
+    <div class="homepage__bg-triangle homepage__bg-triangle--3" />
+    <div class="homepage__bg-triangle homepage__bg-triangle--4" />
+    <div class="homepage__bg-triangle homepage__bg-triangle--5" />
+    <div class="homepage__bg-line homepage__bg-line--1" />
+    <div class="homepage__bg-line homepage__bg-line--2" />
+    <div class="homepage__bg-line homepage__bg-line--3" />
 
     <div class="homepage__content-wrapper">
       <h1 class="homepage__title-container">
@@ -18,38 +18,38 @@
       <div class="homepage__illustration">
         <div class="homepage__illustration__cityscape">
           <div class="homepage__illustration__skyline
-            homepage__illustration__skyline--left-1"></div>
+            homepage__illustration__skyline--left-1" />
           <div class="homepage__illustration__skyline
             homepage__illustration__skyline--right-1
-            homepage__illustration__skyline--dashes"></div>
+            homepage__illustration__skyline--dashes" />
           <div class="homepage__illustration__skyline
-            homepage__illustration__skyline--right-2"></div>
+            homepage__illustration__skyline--right-2" />
           <div class="homepage__illustration__skyline
             homepage__illustration__skyline--right-3
-            homepage__illustration__skyline--dashes"></div>
+            homepage__illustration__skyline--dashes" />
 
           <div class="homepage__illustration__cityscape__building
             homepage__illustration__cityscape__building--back-left-1">
             <div class="homepage__illustration__cityscape__building__lights
-              homepage__illustration__cityscape__building__lights--back-left-1"></div>
+              homepage__illustration__cityscape__building__lights--back-left-1" />
           </div>
           <div class="homepage__illustration__cityscape__building
-            homepage__illustration__cityscape__building--back-left-2"></div>
+            homepage__illustration__cityscape__building--back-left-2" />
           <div class="homepage__illustration__cityscape__building
-            homepage__illustration__cityscape__building--back-left-3"></div>
+            homepage__illustration__cityscape__building--back-left-3" />
           <div class="homepage__illustration__cityscape__building
-            homepage__illustration__cityscape__building--back-center-1"></div>
+            homepage__illustration__cityscape__building--back-center-1" />
           <div class="homepage__illustration__cityscape__building
-            homepage__illustration__cityscape__building--back-center-2"></div>
+            homepage__illustration__cityscape__building--back-center-2" />
           <div class="homepage__illustration__cityscape__building
             homepage__illustration__cityscape__building--back-right-1">
             <div class="homepage__illustration__cityscape__building__lights
-              homepage__illustration__cityscape__building__lights--back-right-1"></div>
+              homepage__illustration__cityscape__building__lights--back-right-1" />
           </div>
           <div class="homepage__illustration__cityscape__building
-            homepage__illustration__cityscape__building--back-right-2"></div>
+            homepage__illustration__cityscape__building--back-right-2" />
           <div class="homepage__illustration__cityscape__building
-            homepage__illustration__cityscape__building--back-right-3"></div>
+            homepage__illustration__cityscape__building--back-right-3" />
           <div class="homepage__illustration__cityscape__building
             homepage__illustration__cityscape__building--fore-left">
             <img class="homepage__illustration__cityscape__building__image
@@ -65,31 +65,31 @@
               alt="">
           </div>
           <div class="homepage__illustration__cityscape__light
-            homepage__illustration__cityscape__light--left"></div>
+            homepage__illustration__cityscape__light--left" />
           <div class="homepage__illustration__cityscape__light
-            homepage__illustration__cityscape__light--right"></div>
+            homepage__illustration__cityscape__light--right" />
         </div>
 
         <div class="homepage__illustration__horizon">
-          <div class="homepage__illustration__horizon__line"></div>
-          <div class="homepage__illustration__horizon__shape"></div>
+          <div class="homepage__illustration__horizon__line" />
+          <div class="homepage__illustration__horizon__shape" />
         </div>
 
         <div class="homepage__illustration__ground">
           <div class="homepage__illustration__skyline
-            homepage__illustration__skyline--left-2"></div>
+            homepage__illustration__skyline--left-2" />
           <div class="homepage__illustration__skyline
-            homepage__illustration__skyline--right-4"></div>
+            homepage__illustration__skyline--right-4" />
           <div class="homepage__illustration__skyline
             homepage__illustration__skyline--right-5
-            homepage__illustration__skyline--dashes"></div>
+            homepage__illustration__skyline--dashes" />
 
-          <div class="homepage__illustration__ground__shape"></div>
+          <div class="homepage__illustration__ground__shape" />
           <div class="homepage__illustration__ground__reflexion
-            homepage__illustration__ground__reflexion--left"></div>
+            homepage__illustration__ground__reflexion--left" />
           <div class="homepage__illustration__ground__reflexion
-            homepage__illustration__ground__reflexion--right"></div>
-          <div class="homepage__illustration__ground__light"></div>
+            homepage__illustration__ground__reflexion--right" />
+          <div class="homepage__illustration__ground__light" />
         </div>
       </div>
     </div>

@@ -1,20 +1,18 @@
 <template>
   <li class="history__item"
-    :class="['history__item--' + type,
-      { 'history__item--junction' : junction }]">
+    :class="[
+      'history__item--' + type,
+      { 'history__item--junction' : junction }
+    ]">
     <span class="history__item__icon-wrapper icon-wrapper icon-wrapper--s icon-wrapper--circle">
-      <svg-icon class="icon--m"
-        v-if="type === 'school'"
-        name="scholar" />
-      <svg-icon class="icon--s"
-        v-else
-        name="bag" />
+      <svg-icon v-if="type === 'school'" class="icon--m" name="scholar" />
+      <svg-icon v-else class="icon--s" name="bag" />
     </span>
     <div class="history__item__description">
       <span class="font-sans--bold">{{ name }}</span>
       <p class="font-mono font-mono--small">
-        <span class="history__item__description__company"
-          v-if="company">{{ company }},
+        <span v-if="company" class="history__item__description__company">
+          {{ company }},
         </span>
         <span class="history__item__description__date">
           {{ startDate }} - {{ endDate }}
@@ -27,11 +25,26 @@
 <script>
 export default {
   props: {
-    type: String,
-    name: String,
-    company: String,
-    startDate: String,
-    endDate: String,
+    type: {
+      type: String,
+      required: true
+    },
+    name: {
+      type: String,
+      required: true
+    },
+    company: {
+      type: String,
+      required: true
+    },
+    startDate: {
+      type: String,
+      required: true
+    },
+    endDate: {
+      type: String,
+      required: true
+    },
     junction: Boolean
   }
 }

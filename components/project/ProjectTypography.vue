@@ -1,8 +1,8 @@
 <template>
   <ul class="project-typography">
-    <li class="project-typography__item"
-      v-for="font in fonts"
-      :key="font.id">
+    <li v-for="font in fonts"
+      :key="font.id"
+      class="project-typography__item">
       <img :src="font" alt="">
     </li>
   </ul>
@@ -11,7 +11,10 @@
 <script>
 export default {
   props: {
-    fonts: Array
+    fonts: {
+      type: Array,
+      required: true
+    }
   }
 }
 </script>

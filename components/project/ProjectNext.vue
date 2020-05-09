@@ -4,7 +4,7 @@
       <img :src="image"
         alt=""
         class="project-next__background__image">
-      <div class="project-next__background__filter"></div>
+      <div class="project-next__background__filter" />
     </div>
 
     <div class="project-next__info-wrapper content">
@@ -13,7 +13,7 @@
           <span class="font-mono font-mono--small">Projet suivant</span>
           <span class="project-next__info__text__name">{{ name }}</span>
         </div>
-        <div class="project-next__info__next-icon"></div>
+        <div class="project-next__info__next-icon" />
       </div>
     </div>
   </nuxt-link>
@@ -22,9 +22,18 @@
 <script>
 export default {
   props: {
-    name: String,
-    link: String,
-    image: Function
+    name: {
+      type: String,
+      required: true
+    },
+    link: {
+      type: String,
+      required: true
+    },
+    image: {
+      type: Function,
+      required: true
+    }
   }
 }
 </script>

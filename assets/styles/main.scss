@@ -259,7 +259,7 @@ img {
   &--flex {
     @media screen and (min-width: $breakpoint-m) {
       display: flex;
-      align-items: start;
+      align-items: flex-start;
     }
   }
 }

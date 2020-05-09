@@ -15,7 +15,9 @@
       </section>
 
       <section class="section section--full">
-        <h2 class="heading--second">Parcours</h2>
+        <h2 class="heading--second">
+          Parcours
+        </h2>
         <ul class="history">
           <HistoryItem v-for="(career, id) in careerItems"
             :key="id"
@@ -29,11 +31,13 @@
       </section>
 
       <section class="section section--full">
-        <h2 class="heading--second">Compétences</h2>
+        <h2 class="heading--second">
+          Compétences
+        </h2>
         <div class="skill">
-          <ul class="skill__group"
-            v-for="(skill_group, id) in skills"
+          <ul v-for="(skill_group, id) in skills"
             :key="id"
+            class="skill__group"
             :class="'skill__group--' + id">
             <SkillItem v-for="(skill, id) in skill_group"
               :key="id"
@@ -45,7 +49,9 @@
       </section>
 
       <section class="section section--half">
-        <h2 class="heading--second">Intérêts</h2>
+        <h2 class="heading--second">
+          Intérêts
+        </h2>
         <div class="interests">
           <div class="interests__icon-wrapper icon-wrapper icon-wrapper--l icon-wrapper--circle">
             <svg-icon class="icon icon--xl" name="heart" />
@@ -60,13 +66,15 @@
       </section>
 
       <section class="section section--half">
-        <h2 class="heading--second">Contacts</h2>
+        <h2 class="heading--second">
+          Contacts
+        </h2>
         <ul class="contact">
           <ContactItem v-for="(contact, id) in contacts"
-              :key="id"
-              :url="contact.url"
-              :name="contact.name"
-              :icon="contact.icon" />
+            :key="id"
+            :url="contact.url"
+            :name="contact.name"
+            :icon="contact.icon" />
         </ul>
       </section>
     </div>
