@@ -97,6 +97,9 @@
 </template>
 
 <script>
+export default {
+  layout: 'homepage'
+}
 </script>
 
 <style lang="scss">
