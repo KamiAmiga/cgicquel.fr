@@ -66,6 +66,11 @@
         <div class="header__illustration__design-line
           header__illustration__design-line--3" />
       </template>
+      <template v-else-if="type == 'about'">
+        <img src="~/assets/images/aboutHeader.svg"
+          alt=""
+          class="header__illustration__about-image">
+      </template>
     </div>
     <div class="header__title"
       :class="{ 'header__title--translate' : type != 'about' }">
@@ -346,6 +351,14 @@ $design-angle: 15deg;
           opacity: map-get($opacities, 3);
         }
       }
+    }
+
+    &__about-image {
+      width: auto;
+      height: 100%;
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
     }
   }
 
