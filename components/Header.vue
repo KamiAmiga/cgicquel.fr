@@ -103,7 +103,7 @@ export default {
 // Variables
 //
 
-$header-height: 30rem;
+$header-height: 25rem;
 $drawing-gradient: linear-gradient(
   -30deg,
   map-get($theme-color-primary, base),

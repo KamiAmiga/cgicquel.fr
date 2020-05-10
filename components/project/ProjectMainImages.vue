@@ -92,7 +92,7 @@ $focus-space_m: map-get($spacers, 3) + map-get($spacers, 2);
 
         &-wrapper {
           position: relative;
-          margin-right: map-get($spacers, 4);
+          margin-right: map-get($spacers, 3);
 
           &:last-child {
             margin-right: 0;

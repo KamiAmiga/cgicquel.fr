@@ -63,6 +63,7 @@ export default {
   @media screen and (min-width: $breakpoint-m) {
     display: flex;
     flex-wrap: wrap;
+    align-items: flex-start;
 
     &__item {
       flex: 50% 0 0;

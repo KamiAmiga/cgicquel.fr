@@ -236,6 +236,7 @@ export default {
       &__title {
         margin-bottom: map-get($spacers, 10);
         position: relative;
+        word-break: break-word;
 
         &::before {
           content: "";
