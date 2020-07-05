@@ -1,6 +1,6 @@
 <template>
   <li class="contact-item">
-    <a :href="url" class="contact-item__link">
+    <a :href="url" target="_blank" class="contact-item__link">
       <div class="contact-item__link__icon-wrapper icon-wrapper icon-wrapper--square">
         <svg-icon :name="icon" class="contact-item__link__icon" />
       </div>
