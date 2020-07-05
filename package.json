@@ -19,12 +19,14 @@
     "nuxt": "^2.12.2"
   },
   "devDependencies": {
+    "@aceforth/nuxt-optimized-images": "^1.0.1",
     "@nuxtjs/eslint-config": "^1.0.1",
     "@nuxtjs/eslint-module": "^1.2.0",
     "babel-eslint": "^10.1.0",
     "eslint": "^6.1.0",
     "eslint-plugin-nuxt": "^1.0.0",
     "node-sass": "^4.14.1",
-    "sass-loader": "^8.0.2"
+    "sass-loader": "^8.0.2",
+    "webp-loader": "^0.6.0"
   }
 }

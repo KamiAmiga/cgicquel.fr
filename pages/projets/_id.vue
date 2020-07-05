@@ -29,6 +29,7 @@
           Le projet {{ project.title }} en images
         </h2>
         <ProjectMainImages :imagesGroups="project.imagesGroups"
+          :name="project.id"
           :type="project.type" />
       </section>
 

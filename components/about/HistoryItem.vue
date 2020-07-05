@@ -35,7 +35,8 @@ export default {
     },
     company: {
       type: String,
-      required: true
+      required: false,
+      default: ''
     },
     startDate: {
       type: String,

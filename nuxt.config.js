@@ -47,6 +47,7 @@ export default {
     // Doc: https://axios.nuxtjs.org/usage
     '@nuxtjs/axios',
     '@nuxtjs/style-resources',
+    '@aceforth/nuxt-optimized-images',
     '@nuxtjs/svg-sprite'
   ],
   /*
@@ -71,6 +72,16 @@ export default {
     input: '~/assets/icons/'
   },
   /*
+  ** Optimized images module configuration
+  */
+  optimizedImages: {
+    optimizeImages: true,
+    webp: {
+      method: 5,
+      quality: 85
+    }
+  },
+  /*
   ** Build configuration
   */
   build: {
@@ -80,5 +91,11 @@ export default {
     extractCSS: true,
     extend (config, ctx) {
     }
+  },
+  /*
+  ** Generate configuration
+  */
+  generate: {
+    routes: []
   }
 }

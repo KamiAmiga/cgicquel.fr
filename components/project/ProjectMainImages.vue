@@ -3,12 +3,26 @@
     <figure v-for="imagesGroup in imagesGroups"
       :key="imagesGroup.id"
       class="project-main-images__group">
-      <div>
-        <img :src="imagesGroup.baseImage"
-          alt=""
+      {{ key }}
+      <picture>
+        <source :srcSet="require(`@/assets/images/projectsImages/${name}_${imagesGroup.baseImage}` + '?webp')"
+          media="(min-width: 30em)"
+          type="image/webp"
           class="project-main-images__group__image-base"
           :class="'project-main-images__group__image-base--' + type">
-      </div>
+        <source :srcSet="require(`@/assets/images/projectsImages/${name}_${imagesGroup.baseImage}`)"
+          media="(min-width: 30em)"
+          class="project-main-images__group__image-base"
+          :class="'project-main-images__group__image-base--' + type">
+        <source :srcSet="require(`@/assets/images/projectsImages/${name}_${imagesGroup.mobileImage}` + '?webp')"
+          type="image/webp"
+          class="project-main-images__group__image-base"
+          :class="'project-main-images__group__image-base--' + type">
+        <img :src="require(`@/assets/images/projectsImages/${name}_${imagesGroup.mobileImage}`)"
+          :alt="imagesGroup.alt"
+          class="project-main-images__group__image-base"
+          :class="'project-main-images__group__image-base--' + type">
+      </picture>
       <div v-if="imagesGroup.zoomImages"
         class="project-main-images__group__zoom">
         <div v-for="zoomImage in imagesGroup.zoomImages"
@@ -25,6 +39,9 @@
         </div>
       </div>
     </figure>
+    <div v-if="test">
+      <img :src="require(`@/assets/images/projectsImages/${test}`)">
+    </div>
   </div>
 </template>
 
@@ -33,6 +50,10 @@ export default {
   props: {
     imagesGroups: {
       type: Array,
+      required: true
+    },
+    name: {
+      type: String,
       required: true
     },
     type: {
