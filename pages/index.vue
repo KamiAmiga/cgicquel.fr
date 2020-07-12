@@ -54,14 +54,14 @@
             homepage__illustration__cityscape__building--fore-left">
             <img class="homepage__illustration__cityscape__building__image
               homepage__illustration__cityscape__building__image--left"
-              src=""
+              src="~/assets/images/homeImages/left-3.png"
               alt="">
           </div>
           <div class="homepage__illustration__cityscape__building
             homepage__illustration__cityscape__building--fore-right">
             <img class="homepage__illustration__cityscape__building__image
               homepage__illustration__cityscape__building__image--right"
-              src=""
+              src="~/assets/images/homeImages/right-1.jpg"
               alt="">
           </div>
           <div class="homepage__illustration__cityscape__light
@@ -149,13 +149,7 @@ $bg-triangles:
     }
 
     &-main {
-      // turn into mixin
-      font-size: $font-size-base * $font-size-scale-ratio * $font-size-scale-ratio * $font-size-scale-ratio;
-      color: map-get($theme-color-primary, reverse);
-      font-weight: $font-weight-semibold;
-      line-height: $line-height-small;
-      letter-spacing: $letter-spacing-small-2;
-      // turn into mixin
+      @include font-sans(xxl);
       display: inline-block;
       box-sizing: border-box;
       padding: map-get($spacers, 4)
@@ -380,7 +374,7 @@ $bg-triangles:
         }
 
         &__image {
-          width: 120%;
+          width: 100%;
           position: absolute;
           top: 50%;
           left: 50%;
@@ -746,13 +740,7 @@ $bg-triangles:
       }
 
       &-main {
-        // turn into mixin
-        font-size: $font-size-base * $font-size-scale-ratio * $font-size-scale-ratio * $font-size-scale-ratio * $font-size-scale-ratio * $font-size-scale-ratio;
-        color: map-get($theme-color-primary, reverse);
-        font-weight: $font-weight-semibold;
-        line-height: $line-height-small;
-        letter-spacing: $letter-spacing-small-1;
-        // turn into mixin
+        @include font-sans(xxxl);
         border-left: none;
         position: relative;
 

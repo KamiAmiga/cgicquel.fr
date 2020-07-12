@@ -1,0 +1,37 @@
+.content {
+  display: block;
+  width: 100%;
+  max-width: $container-max-width;
+  margin: 0 auto;
+
+  @media screen and (min-width: $breakpoint-m) {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+}
+
+.section {
+  box-sizing: border-box;
+  flex-shrink: 0;
+  padding: map-get($spacers, 7) map-get($spacers, 4);
+
+  &--full {
+    flex-basis: 100%;
+  }
+
+  &--half {
+    flex-basis: 50%;
+  }
+
+  &--flex {
+    @media screen and (min-width: $breakpoint-m) {
+      display: flex;
+      align-items: flex-start;
+    }
+  }
+}
+
+.text-container {
+  max-width: 45rem;
+}

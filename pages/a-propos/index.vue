@@ -8,7 +8,7 @@
       <section class="section section--full">
         <div class="about-content__intro-wrapper">
           <div class="text-container about-content__intro">
-            <p>Bonjour, je suis <strong class="font-sans--capitalized">Camille, UI Designer et Intégratrice</strong>, travaillant dans le Nord de la France pour <a href="https://www.ovhcloud.com/fr/" class="font-sans--link" target="_blank">OVHcloud</a>. Mon cursus et mes expériences professionnelles m'ont permis de naviguer entre les domaines du <strong class="font-sans--capitalized">design</strong> et du <strong class="font-sans--capitalized">code</strong>.</p>
+            <p>Bonjour, je suis <strong class="font-sans--capitalized">Camille, UI Designer et Intégratrice</strong>, travaillant dans le Nord de la France pour <a href="https://www.ovhcloud.com/fr/" class="link" target="_blank">OVHcloud</a>. Mon cursus et mes expériences professionnelles m'ont permis de naviguer entre les domaines du <strong class="font-sans--capitalized">design</strong> et du <strong class="font-sans--capitalized">code</strong>.</p>
             <p><strong class="font-sans--capitalized">J'aime créer</strong> et n'hésite pas à découvrir de nouveaux champs d'expression, qu'ils soient artistiques ou informatiques.</p>
           </div>
         </div>

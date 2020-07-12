@@ -108,14 +108,8 @@ export default {
       align-items: flex-end;
 
       &__name {
-        // turn into mixin
-        font-size: $font-size-base;
+        @include font-sans(capitalized);
         color: map-get($theme-color-accent, lighter);
-        font-weight: $font-weight-light;
-        line-height: $line-height-base;
-        letter-spacing: $letter-spacing-large-3;
-        text-transform: uppercase;
-        // turn into mixin
       }
     }
 
@@ -174,11 +168,8 @@ export default {
       padding-bottom: map-get($spacers, 3);
 
       &__text__name {
-        // turn into mixin
-        font-size: $font-size-base * $font-size-scale-ratio;
-        line-height: $line-height-small;
-        letter-spacing: $letter-spacing-large-2;
-        // turn into mixin
+        @include font-sans(md-capitalized);
+        color: map-get($theme-color-accent, lighter);
       }
 
       &__next-icon {
