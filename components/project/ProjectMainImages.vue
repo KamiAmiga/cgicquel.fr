@@ -39,9 +39,6 @@
         </div>
       </div>
     </figure>
-    <div v-if="test">
-      <img :src="require(`@/assets/images/projectsImages/${test}`)">
-    </div>
   </div>
 </template>
 
