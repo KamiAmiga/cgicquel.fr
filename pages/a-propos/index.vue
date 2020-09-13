@@ -274,8 +274,13 @@ export default {
         },
         {
           url: 'https://www.redbubble.com/fr/people/kamiamiga/shop?asc=u',
-          name: 'Ma boutique',
+          name: 'Ma boutique Redbubble',
           icon: 'redbubble'
+        },
+        {
+          url: 'https://displate.com/kamiamiga?art=5ee77d5938e4a',
+          name: 'Ma boutique Displate',
+          icon: 'displate'
         }
       ]
     }
