@@ -18,12 +18,6 @@
         </div>
       </section>
 
-      <div class="section section--full">
-        <a href="#main-images"
-          class="project__scrollto"
-          :aria-label="'Les images du projet' + project.title" />
-      </div>
-
       <section id="main-images" class="section section--full">
         <h2 class="sr-only">
           Le projet {{ project.title }} en images
@@ -110,46 +104,9 @@ export default {
     padding-top: map-get($spacers, 7);
   }
 
-  &__scrollto {
-    display: flex;
-    box-sizing: border-box;
-    width: map-get($spacers, 8);
-    height: map-get($spacers, 8);
-    border: .125rem solid map-get($theme-color-secondary, darker);
-    margin: 0 auto;
-    justify-content: center;
-    align-items: center;
-    background-color: map-get($theme-color-primary, base);
-    border-radius: 50%;
-    box-shadow: 0 0 3px
-      fade-out(map-get($theme-color-secondary, lighter), map-get($fading-out, 5));
-
-    &::before {
-      content: '';
-      display: block;
-      width: .75rem;
-      height: .75rem;
-      border-left: .25rem solid map-get($theme-color-accent, base);
-      border-bottom: .25rem solid map-get($theme-color-accent, base);
-      margin-top: map-get($spacers, 2) * -1;
-      transform: rotate(-45deg);
-    }
-  }
-
   @media screen and (min-width: $breakpoint-m) {
     &__description {
       padding: map-get($spacers, 4) map-get($spacers, 9) 0 map-get($spacers, 9);
-    }
-
-    &__scrollto {
-      width: map-get($spacers, 9);
-      height: map-get($spacers, 9);
-
-      &::before {
-        width: 1.25rem;
-        height: 1.25rem;
-        margin-top: map-get($spacers, 3) * -1;
-      }
     }
   }
 }
