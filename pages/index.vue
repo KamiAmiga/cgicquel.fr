@@ -11,8 +11,16 @@
 
     <div class="homepage__content-wrapper">
       <h1 class="homepage__title-container">
-        <span class="homepage__title-sub font-sans--md-capitalized">Camille Gicquel</span>
-        <span class="homepage__title-main">UI Design & Intégration</span>
+        <div class="homepage__title-sub">
+          <div class="anim-slide-up">
+            <div class="font-sans--md-capitalized anim-slide-up__text">Camille Gicquel</div>
+          </div>
+        </div>
+        <div class="homepage__title-main">
+          <div class="anim-slide-up">
+            <div class="anim-slide-up__text">UI Design & Intégration</div>
+          </div>
+        </div>
       </h1>
 
       <div class="homepage__illustration">
@@ -156,15 +164,61 @@ $bg-triangles:
         map-get($spacers, 4)
         map-get($spacers, 4)
         (map-get($spacers, 7) - map-get($spacers, 2));
-      border-left: map-get($spacers, 2) solid map-get($theme-color-secondary, darker);
-      background: linear-gradient(
-        to right,
-        fade-out(map-get($theme-color-secondary, darker),
-          map-get($fading-out, 5)),
-        16.5%,
-        fade-out(map-get($theme-color-secondary, darker),
-          map-get($fading-out, 0)) 50%,
-      );
+      border-left-width: map-get($spacers, 2);
+      border-left-style: solid;
+      border-left-color: fade-out(
+        map-get($theme-color-secondary, darker),
+        map-get($fading-out, 0));
+      position: relative;
+      animation-name: homepage-title-main-border-anim;
+      animation-duration: .32s;
+      animation-delay: .64s;
+      animation-fill-mode: forwards;
+
+      @keyframes homepage-title-main-border-anim {
+        from {
+          border-left-color: fade-out(
+            map-get($theme-color-secondary, darker),
+            map-get($fading-out, 0));
+        }
+
+        to {
+          border-left-color: fade-out(
+            map-get($theme-color-secondary, darker),
+            map-get($fading-out, 9));
+        }
+      }
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 100%;
+        background: linear-gradient(
+          to right,
+          fade-out(map-get($theme-color-secondary, darker),
+            map-get($fading-out, 5)),
+          16.5%,
+          fade-out(map-get($theme-color-secondary, darker),
+            map-get($fading-out, 0)) 50%,
+        );
+        animation-name: homepage-title-main-gradient-anim;
+        animation-duration: .32s;
+        animation-delay: .64s;
+        animation-fill-mode: forwards;
+
+        @keyframes homepage-title-main-gradient-anim {
+          from {
+            right: 100%;
+          }
+
+          to {
+            right: 0;
+          }
+        }
+      }
     }
   }
 
