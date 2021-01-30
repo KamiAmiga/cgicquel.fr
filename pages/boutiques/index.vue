@@ -25,6 +25,22 @@
               <span>Displate</span>
             </a>
           </li>
+          <li>
+            <a href="https://www.spreadshirt.fr/shop/user/kami+amiga/"
+              class="boutiques__list__link">
+              <svg-icon name="spreadshirt"
+                class="boutiques__list__link__icon icon--xl" />
+              <span>Spreadshirt</span>
+            </a>
+          </li>
+          <li>
+            <a href=" https://www.fiverr.com/cgicquel"
+              class="boutiques__list__link">
+              <svg-icon name="fiverr"
+                class="boutiques__list__link__icon icon--xl" />
+              <span>Fiverr</span>
+            </a>
+          </li>
         </ul>
       </section>
     </div>
