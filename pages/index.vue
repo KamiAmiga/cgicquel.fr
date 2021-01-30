@@ -18,7 +18,7 @@
         </div>
         <div class="homepage__title-main">
           <div class="anim-slide-up">
-            <div class="anim-slide-up__text">UI Design & Intégration</div>
+            <div class="anim-slide-up__text">Design & Dev frontend</div>
           </div>
         </div>
       </h1>
